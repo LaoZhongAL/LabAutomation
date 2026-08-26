@@ -1,0 +1,82 @@
+# ==============================
+# Python
+# ==============================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ==============================
+# Environment / Secrets
+# ==============================
+
+.env
+.env.*
+!.env.example
+
+# ==============================
+# IDE / Editor
+# ==============================
+
+.vscode/
+.idea/
+*.code-workspace
+
+# ==============================
+# Windows
+# ==============================
+
+Thumbs.db
+Desktop.ini
+
+# ==============================
+# Logs / Temporary files
+# ==============================
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ==============================
+# Generated files
+# ==============================
+
+*.generated.*
+*.cache
+
+# ==============================
+# Local configuration
+# ==============================
+
+config.local.*
+settings.local.*
+
+# ==============================
+# Build / Release artifacts
+# ==============================
+
+*.zip
+*.exe
+*.msi
