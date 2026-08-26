@@ -1,0 +1,678 @@
+{
+  "created_at": "2026-08-26T14:57:28.887+09:00",
+  "operation": "query-only single-instrument diagnostic snapshot",
+  "mode": "real",
+  "resource": "GPIB0::6::INSTR",
+  "expected_identity": {
+    "vendor": "KEITHLEY INSTRUMENTS INC.",
+    "model": "2182A",
+    "serial": "1340129",
+    "firmware": "C02 /A02"
+  },
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "configuration_controls_exposed": false,
+    "live_query": "FETCh?"
+  },
+  "values": {
+    "identity": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+    "scpi_version": "1991.0",
+    "line_frequency_hz": "50",
+    "power_on_setup": "SAV0",
+    "sense_function": "\"VOLT:DC\"",
+    "active_channel": "1",
+    "nplc": "5.00",
+    "ch1_range_v": "0.010000",
+    "ch1_autorange": "0",
+    "ch2_range_v": "10.000000",
+    "ch2_autorange": "1",
+    "ch1_digital_filter": "0",
+    "ch1_analog_filter": "0",
+    "ch2_digital_filter": "1",
+    "ch2_analog_filter": "0",
+    "trigger_count": "+9.9e37",
+    "trigger_delay_s": "0.000",
+    "trigger_source": "IMM",
+    "sample_count": "1",
+    "continuous_initiation": "1",
+    "data_format": "ASC",
+    "format_elements": "READ"
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+      "elapsed_ms": 13.485
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "ok": true,
+      "response": "1991.0",
+      "elapsed_ms": 7.221
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "SYST:LFREQUENCY?",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 8.995
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "ok": true,
+      "response": "SAV0",
+      "elapsed_ms": 9.154
+    },
+    {
+      "name": "sense_function",
+      "command": "SENS:FUNC?",
+      "ok": true,
+      "response": "\"VOLT:DC\"",
+      "elapsed_ms": 8.361
+    },
+    {
+      "name": "active_channel",
+      "command": "SENS:CHAN?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 6.808
+    },
+    {
+      "name": "nplc",
+      "command": "SENS:VOLT:DC:NPLC?",
+      "ok": true,
+      "response": "5.00",
+      "elapsed_ms": 10.771
+    },
+    {
+      "name": "ch1_range_v",
+      "command": "SENS:VOLT:DC:CHAN1:RANG?",
+      "ok": true,
+      "response": "0.010000",
+      "elapsed_ms": 13.608
+    },
+    {
+      "name": "ch1_autorange",
+      "command": "SENS:VOLT:DC:CHAN1:RANG:AUTO?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 12.068
+    },
+    {
+      "name": "ch2_range_v",
+      "command": "SENS:VOLT:DC:CHAN2:RANG?",
+      "ok": true,
+      "response": "10.000000",
+      "elapsed_ms": 12.877
+    },
+    {
+      "name": "ch2_autorange",
+      "command": "SENS:VOLT:DC:CHAN2:RANG:AUTO?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 12.113
+    },
+    {
+      "name": "ch1_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 11.709
+    },
+    {
+      "name": "ch1_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN1:LPASS?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 11.215
+    },
+    {
+      "name": "ch2_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 11.877
+    },
+    {
+      "name": "ch2_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN2:LPASS?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 12.438
+    },
+    {
+      "name": "trigger_count",
+      "command": "TRIG:COUNT?",
+      "ok": true,
+      "response": "+9.9e37",
+      "elapsed_ms": 7.996
+    },
+    {
+      "name": "trigger_delay_s",
+      "command": "TRIG:DELAY?",
+      "ok": true,
+      "response": "0.000",
+      "elapsed_ms": 8.275
+    },
+    {
+      "name": "trigger_source",
+      "command": "TRIG:SOURCE?",
+      "ok": true,
+      "response": "IMM",
+      "elapsed_ms": 7.754
+    },
+    {
+      "name": "sample_count",
+      "command": "SAMP:COUN?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 8.644
+    },
+    {
+      "name": "continuous_initiation",
+      "command": "INIT:CONT?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 8.126
+    },
+    {
+      "name": "data_format",
+      "command": "FORM:DATA?",
+      "ok": true,
+      "response": "ASC",
+      "elapsed_ms": 8.579
+    },
+    {
+      "name": "format_elements",
+      "command": "FORM:ELEM?",
+      "ok": true,
+      "response": "READ",
+      "elapsed_ms": 8.766
+    }
+  ],
+  "diagnostics": {
+    "schema_version": 1,
+    "profile_id": "gpib6-2182a-ch1-10mv-nplc5-v1",
+    "overall": "PASS",
+    "can_start_live": true,
+    "layer_status": {
+      "communication": "PASS",
+      "identity": "PASS",
+      "configuration": "PASS",
+      "acquisition": "PASS",
+      "recorder": "PASS"
+    },
+    "blockers": [],
+    "warnings": [],
+    "checks": [
+      {
+        "check_id": "recorder.preflight",
+        "layer": "recorder",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": true,
+        "observed": true,
+        "message": "Evidence directory and diagnostic files are writable."
+      },
+      {
+        "check_id": "communication.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+        "message": "Required query 'identity' completed."
+      },
+      {
+        "check_id": "communication.scpi_version",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1991.0",
+        "message": "Required query 'scpi_version' completed."
+      },
+      {
+        "check_id": "communication.line_frequency_hz",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "50",
+        "message": "Required query 'line_frequency_hz' completed."
+      },
+      {
+        "check_id": "communication.power_on_setup",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "SAV0",
+        "message": "Required query 'power_on_setup' completed."
+      },
+      {
+        "check_id": "communication.sense_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "\"VOLT:DC\"",
+        "message": "Required query 'sense_function' completed."
+      },
+      {
+        "check_id": "communication.active_channel",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'active_channel' completed."
+      },
+      {
+        "check_id": "communication.nplc",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "5.00",
+        "message": "Required query 'nplc' completed."
+      },
+      {
+        "check_id": "communication.ch1_range_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0.010000",
+        "message": "Required query 'ch1_range_v' completed."
+      },
+      {
+        "check_id": "communication.ch1_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_autorange' completed."
+      },
+      {
+        "check_id": "communication.ch2_range_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "10.000000",
+        "message": "Required query 'ch2_range_v' completed."
+      },
+      {
+        "check_id": "communication.ch2_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'ch2_autorange' completed."
+      },
+      {
+        "check_id": "communication.ch1_digital_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_digital_filter' completed."
+      },
+      {
+        "check_id": "communication.ch1_analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_analog_filter' completed."
+      },
+      {
+        "check_id": "communication.ch2_digital_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'ch2_digital_filter' completed."
+      },
+      {
+        "check_id": "communication.ch2_analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch2_analog_filter' completed."
+      },
+      {
+        "check_id": "communication.trigger_count",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "+9.9e37",
+        "message": "Required query 'trigger_count' completed."
+      },
+      {
+        "check_id": "communication.trigger_delay_s",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0.000",
+        "message": "Required query 'trigger_delay_s' completed."
+      },
+      {
+        "check_id": "communication.trigger_source",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "IMM",
+        "message": "Required query 'trigger_source' completed."
+      },
+      {
+        "check_id": "communication.sample_count",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'sample_count' completed."
+      },
+      {
+        "check_id": "communication.continuous_initiation",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'continuous_initiation' completed."
+      },
+      {
+        "check_id": "communication.data_format",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "ASC",
+        "message": "Required query 'data_format' completed."
+      },
+      {
+        "check_id": "communication.format_elements",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "READ",
+        "message": "Required query 'format_elements' completed."
+      },
+      {
+        "check_id": "communication.configuration_latency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "maximum query latency <= 500 ms",
+        "observed": 13.608,
+        "message": "Configuration query latency is within the observation threshold."
+      },
+      {
+        "check_id": "identity.vendor",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "KEITHLEY INSTRUMENTS INC.",
+        "observed": "KEITHLEY INSTRUMENTS INC.",
+        "message": "Exact manufacturer match."
+      },
+      {
+        "check_id": "identity.model",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "2182A",
+        "observed": "2182A",
+        "message": "Exact model match."
+      },
+      {
+        "check_id": "identity.serial",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "1340129",
+        "observed": "1340129",
+        "message": "Exact serial number match."
+      },
+      {
+        "check_id": "identity.firmware",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "C02 /A02",
+        "observed": "C02 /A02",
+        "message": "Exact firmware match."
+      },
+      {
+        "check_id": "configuration.scpi_version",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "1991.0",
+        "observed": "1991.0",
+        "message": "scpi_version matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.line_frequency_hz",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 50.0,
+        "observed": 50.0,
+        "message": "line_frequency_hz matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.power_on_setup",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "SAV0",
+        "observed": "SAV0",
+        "message": "power_on_setup matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.sense_function",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "VOLT:DC",
+        "observed": "VOLT:DC",
+        "message": "sense_function matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.active_channel",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 1,
+        "observed": 1,
+        "message": "active_channel matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.nplc",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 5.0,
+        "observed": 5.0,
+        "message": "nplc matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.ch1_range_v",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0.01,
+        "observed": 0.01,
+        "message": "ch1_range_v matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.ch1_autorange",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": 0,
+        "message": "ch1_autorange matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.ch1_digital_filter",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": 0,
+        "message": "ch1_digital_filter matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.ch1_analog_filter",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": 0,
+        "message": "ch1_analog_filter matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.trigger_count",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "infinite (>= 1e37)",
+        "observed": 9.9e+37,
+        "message": "trigger_count matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.trigger_delay_s",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0.0,
+        "observed": 0.0,
+        "message": "trigger_delay_s matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.trigger_source",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "IMM",
+        "observed": "IMM",
+        "message": "trigger_source matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.sample_count",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 1,
+        "observed": 1,
+        "message": "sample_count matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.continuous_initiation",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 1,
+        "observed": 1,
+        "message": "continuous_initiation matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.data_format",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "ASC",
+        "observed": "ASC",
+        "message": "data_format matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.format_elements",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "READ",
+        "observed": "READ",
+        "message": "format_elements matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.ch2_range_v",
+        "layer": "configuration",
+        "status": "N/A",
+        "blocks_live": false,
+        "expected": "valid record-only response; CH2 is not the active GPIB6 live channel",
+        "observed": "10.000000",
+        "message": "ch2_range_v is preserved as valid evidence but does not gate CH1 live observation."
+      },
+      {
+        "check_id": "configuration.ch2_autorange",
+        "layer": "configuration",
+        "status": "N/A",
+        "blocks_live": false,
+        "expected": "valid record-only response; CH2 is not the active GPIB6 live channel",
+        "observed": "1",
+        "message": "ch2_autorange is preserved as valid evidence but does not gate CH1 live observation."
+      },
+      {
+        "check_id": "configuration.ch2_digital_filter",
+        "layer": "configuration",
+        "status": "N/A",
+        "blocks_live": false,
+        "expected": "valid record-only response; CH2 is not the active GPIB6 live channel",
+        "observed": "1",
+        "message": "ch2_digital_filter is preserved as valid evidence but does not gate CH1 live observation."
+      },
+      {
+        "check_id": "configuration.ch2_analog_filter",
+        "layer": "configuration",
+        "status": "N/A",
+        "blocks_live": false,
+        "expected": "valid record-only response; CH2 is not the active GPIB6 live channel",
+        "observed": "0",
+        "message": "ch2_analog_filter is preserved as valid evidence but does not gate CH1 live observation."
+      }
+    ],
+    "summary": {
+      "pass": 45,
+      "warn": 0,
+      "blocked": 0,
+      "unknown": 0,
+      "not_applicable": 4,
+      "total": 49
+    }
+  },
+  "live_readiness": {
+    "identity_matches": true,
+    "ready": true,
+    "overall": "PASS",
+    "blockers": [],
+    "warnings": []
+  },
+  "derived_poll_interval_s": 0.25,
+  "fault_injection": {
+    "scenario": "nominal",
+    "consumed_rule_ids": [],
+    "query_history": []
+  }
+}

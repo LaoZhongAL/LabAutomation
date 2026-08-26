@@ -1,0 +1,620 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T08:24:52.039754+00:00",
+  "finished_utc": "2026-08-19T08:24:52.040036+00:00",
+  "profile": "2182a",
+  "instrument_model": "Keithley 2182A",
+  "command_set": "SCPI",
+  "scope": "full",
+  "transport": "built-in deterministic simulator",
+  "visa_resource": null,
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "macOS-26.6.1-arm64-arm-64bit",
+    "os_system": "Darwin",
+    "os_release": "25.6.0",
+    "machine": "arm64",
+    "python_bits": 64,
+    "python": "3.11.15",
+    "python_implementation": "CPython",
+    "locale": [
+      "en_US",
+      "UTF-8"
+    ],
+    "timezone": [
+      "JST",
+      "JST"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.4.1",
+      "pyvisa": null,
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,SIM2182001,C11",
+      "group": "identity",
+      "note": ""
+    },
+    "scpi_version": {
+      "value": "1999.0",
+      "group": "system",
+      "note": ""
+    },
+    "line_frequency_hz": {
+      "value": "50",
+      "group": "system",
+      "note": ""
+    },
+    "power_on_setup": {
+      "value": "RST",
+      "group": "system",
+      "note": ""
+    },
+    "gpib_address": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "auto_zero": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "front_auto_zero": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "line_sync": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "beeper": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "key_click": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "sense_function": {
+      "value": "\"VOLT:DC\"",
+      "group": "sense",
+      "note": ""
+    },
+    "active_channel": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "nplc": {
+      "value": "1.000000",
+      "group": "sense",
+      "note": ""
+    },
+    "digits": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "ch1_range_v": {
+      "value": "1.000000E-01",
+      "group": "sense",
+      "note": ""
+    },
+    "ch1_autorange": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "ch2_range_v": {
+      "value": "1.000000E+00",
+      "group": "sense",
+      "note": ""
+    },
+    "ch2_autorange": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "ch1_digital_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch1_filter_count": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch1_filter_type": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch1_filter_window_pct": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch1_analog_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch2_digital_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch2_filter_count": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch2_filter_type": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch2_filter_window_pct": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch2_analog_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "ch1_relative": {
+      "value": "0",
+      "group": "relative",
+      "note": ""
+    },
+    "ch1_relative_enabled": {
+      "value": "0",
+      "group": "relative",
+      "note": ""
+    },
+    "ch2_relative": {
+      "value": "0",
+      "group": "relative",
+      "note": ""
+    },
+    "ch2_relative_enabled": {
+      "value": "0",
+      "group": "relative",
+      "note": ""
+    },
+    "latest_cached_reading": {
+      "value": "2.500000E-07",
+      "group": "reading",
+      "note": "Returns the cached latest value; does not initiate a measurement."
+    },
+    "trigger_count": {
+      "value": "1",
+      "group": "trigger",
+      "note": ""
+    },
+    "trigger_delay_s": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    },
+    "trigger_delay_auto": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    },
+    "trigger_source": {
+      "value": "IMM",
+      "group": "trigger",
+      "note": ""
+    },
+    "trigger_timer_s": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    },
+    "display_enabled": {
+      "value": "0",
+      "group": "display",
+      "note": ""
+    },
+    "format_data": {
+      "value": "0",
+      "group": "format",
+      "note": ""
+    },
+    "format_elements": {
+      "value": "0",
+      "group": "format",
+      "note": ""
+    },
+    "analog_output_enabled": {
+      "value": "0",
+      "group": "analog_output",
+      "note": ""
+    },
+    "analog_output_gain": {
+      "value": "0",
+      "group": "analog_output",
+      "note": ""
+    },
+    "analog_output_offset": {
+      "value": "0",
+      "group": "analog_output",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,SIM2182001,C11",
+      "identity_matches_profile": true,
+      "elapsed_ms": 0.014
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "group": "system",
+      "ok": true,
+      "response": "1999.0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "SYST:LFREQUENCY?",
+      "group": "system",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "group": "system",
+      "ok": true,
+      "response": "RST",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "gpib_address",
+      "command": "SYST:COMM:GPIB:ADDR?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "auto_zero",
+      "command": "SYST:AZERO?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "front_auto_zero",
+      "command": "SYST:FAZERO?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "line_sync",
+      "command": "SYST:LSYNC?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.008
+    },
+    {
+      "name": "beeper",
+      "command": "SYST:BEEPER?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "key_click",
+      "command": "SYST:KCLICK?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sense_function",
+      "command": "SENS:FUNC?",
+      "group": "sense",
+      "ok": true,
+      "response": "\"VOLT:DC\"",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "active_channel",
+      "command": "SENS:CHAN?",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "nplc",
+      "command": "SENS:VOLT:DC:NPLC?",
+      "group": "sense",
+      "ok": true,
+      "response": "1.000000",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "digits",
+      "command": "SENS:VOLT:DC:DIGITS?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_range_v",
+      "command": "SENS:VOLT:DC:CHAN1:RANG?",
+      "group": "sense",
+      "ok": true,
+      "response": "1.000000E-01",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_autorange",
+      "command": "SENS:VOLT:DC:CHAN1:RANG:AUTO?",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_range_v",
+      "command": "SENS:VOLT:DC:CHAN2:RANG?",
+      "group": "sense",
+      "ok": true,
+      "response": "1.000000E+00",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_autorange",
+      "command": "SENS:VOLT:DC:CHAN2:RANG:AUTO?",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_filter_count",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER:COUNT?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_filter_type",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER:TCONTROL?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_filter_window_pct",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER:WINDOW?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN1:LPASS?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_filter_count",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER:COUNT?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_filter_type",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER:TCONTROL?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_filter_window_pct",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER:WINDOW?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN2:LPASS?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_relative",
+      "command": "SENS:VOLT:DC:CHAN1:REFERENCE?",
+      "group": "relative",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch1_relative_enabled",
+      "command": "SENS:VOLT:DC:CHAN1:REFERENCE:STATE?",
+      "group": "relative",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_relative",
+      "command": "SENS:VOLT:DC:CHAN2:REFERENCE?",
+      "group": "relative",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "ch2_relative_enabled",
+      "command": "SENS:VOLT:DC:CHAN2:REFERENCE:STATE?",
+      "group": "relative",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "latest_cached_reading",
+      "command": "SENS:DATA:LATEST?",
+      "group": "reading",
+      "ok": true,
+      "response": "2.500000E-07",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_count",
+      "command": "TRIG:COUNT?",
+      "group": "trigger",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_delay_s",
+      "command": "TRIG:DELAY?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_delay_auto",
+      "command": "TRIG:DELAY:AUTO?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_source",
+      "command": "TRIG:SOURCE?",
+      "group": "trigger",
+      "ok": true,
+      "response": "IMM",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_timer_s",
+      "command": "TRIG:TIMER?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "display_enabled",
+      "command": "DISP:ENABLE?",
+      "group": "display",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "format_data",
+      "command": "FORM:DATA?",
+      "group": "format",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "format_elements",
+      "command": "FORM:ELEM?",
+      "group": "format",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "analog_output_enabled",
+      "command": "OUTP?",
+      "group": "analog_output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "analog_output_gain",
+      "command": "OUTP:GAIN?",
+      "group": "analog_output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "analog_output_offset",
+      "command": "OUTP:OFFSET?",
+      "group": "analog_output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    }
+  ]
+}

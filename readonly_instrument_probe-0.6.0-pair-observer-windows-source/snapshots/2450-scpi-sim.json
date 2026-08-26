@@ -1,0 +1,711 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T09:24:41.843919+00:00",
+  "finished_utc": "2026-08-19T09:24:41.844369+00:00",
+  "profile": "2450-scpi",
+  "instrument_model": "Keithley 2450",
+  "command_set": "SCPI",
+  "scope": "full",
+  "transport": "built-in deterministic simulator",
+  "visa_resource": null,
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "macOS-26.6.1-arm64-arm-64bit",
+    "os_system": "Darwin",
+    "os_release": "25.6.0",
+    "machine": "arm64",
+    "python_bits": 64,
+    "python": "3.9.6",
+    "python_implementation": "CPython",
+    "locale": [
+      "en_US",
+      "UTF-8"
+    ],
+    "timezone": [
+      "JST",
+      "JST"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.5.1",
+      "pyvisa": null,
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS,MODEL 2450,SIM2450001,1.7.18",
+      "group": "identity",
+      "note": ""
+    },
+    "scpi_version": {
+      "value": "1996.0",
+      "group": "system",
+      "note": ""
+    },
+    "line_frequency_hz": {
+      "value": "50",
+      "group": "system",
+      "note": ""
+    },
+    "instrument_time": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "power_on_setup": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "gpib_address": {
+      "value": "25",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_mac": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_configuration": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "source_function": {
+      "value": "VOLT",
+      "group": "source",
+      "note": ""
+    },
+    "output_enabled": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "interlock_asserted": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "terminals": {
+      "value": "FRON",
+      "group": "routing",
+      "note": ""
+    },
+    "measure_function": {
+      "value": "\"CURR\"",
+      "group": "sense",
+      "note": ""
+    },
+    "source_current_a": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_current_range_a": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_current_autorange": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_current_voltage_limit_v": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "source_current_limit_tripped": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "source_voltage_v": {
+      "value": "0.000000E+00",
+      "group": "source",
+      "note": ""
+    },
+    "source_voltage_range_v": {
+      "value": "2.000000E+00",
+      "group": "source",
+      "note": ""
+    },
+    "source_voltage_autorange": {
+      "value": "1",
+      "group": "source",
+      "note": ""
+    },
+    "source_voltage_current_limit_a": {
+      "value": "1.000000E-03",
+      "group": "limit",
+      "note": ""
+    },
+    "source_voltage_limit_tripped": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "overvoltage_protection": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "overvoltage_protection_tripped": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "source_current_off_mode": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "source_voltage_off_mode": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "source_current_high_capacitance": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_current_readback": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_voltage_readback": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "measure_count": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_current_nplc": {
+      "value": "1.000000",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_current_range_a": {
+      "value": "1.000000E-03",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_current_autorange": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_voltage_nplc": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_voltage_range_v": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_voltage_autorange": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_resistance_nplc": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_resistance_range_ohm": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_resistance_autorange": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_remote_sense_current": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_remote_sense_voltage": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_current_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "measure_current_filter_count": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "measure_voltage_filter": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "measure_voltage_filter_count": {
+      "value": "0",
+      "group": "filter",
+      "note": ""
+    },
+    "trigger_state": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    },
+    "trigger_blocks": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    },
+    "buffer1_count": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "buffer2_count": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "format_data": {
+      "value": "0",
+      "group": "format",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS,MODEL 2450,SIM2450001,1.7.18",
+      "identity_matches_profile": true,
+      "elapsed_ms": 0.016
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "group": "system",
+      "ok": true,
+      "response": "1996.0",
+      "elapsed_ms": 0.008
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "SYST:LFREQUENCY?",
+      "group": "system",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "instrument_time",
+      "command": "SYST:TIME? 1",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "gpib_address",
+      "command": "SYST:GPIB:ADDR?",
+      "group": "communication",
+      "ok": true,
+      "response": "25",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "lan_mac",
+      "command": "SYST:COMM:LAN:MACADDRESS?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "lan_configuration",
+      "command": "SYST:COMM:LAN:CONFIGURE?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_function",
+      "command": "SOUR:FUNC?",
+      "group": "source",
+      "ok": true,
+      "response": "VOLT",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "output_enabled",
+      "command": "OUTP?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "interlock_asserted",
+      "command": "OUTP:INTERLOCK:TRIPPED?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.007
+    },
+    {
+      "name": "terminals",
+      "command": "ROUT:TERMINALS?",
+      "group": "routing",
+      "ok": true,
+      "response": "FRON",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_function",
+      "command": "SENS:FUNC?",
+      "group": "sense",
+      "ok": true,
+      "response": "\"CURR\"",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_a",
+      "command": "SOUR:CURR?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_range_a",
+      "command": "SOUR:CURR:RANG?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_autorange",
+      "command": "SOUR:CURR:RANG:AUTO?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_voltage_limit_v",
+      "command": "SOUR:CURR:VLIMIT?",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_limit_tripped",
+      "command": "SOUR:CURR:VLIMIT:TRIPPED?",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_v",
+      "command": "SOUR:VOLT?",
+      "group": "source",
+      "ok": true,
+      "response": "0.000000E+00",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_range_v",
+      "command": "SOUR:VOLT:RANG?",
+      "group": "source",
+      "ok": true,
+      "response": "2.000000E+00",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_autorange",
+      "command": "SOUR:VOLT:RANG:AUTO?",
+      "group": "source",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_current_limit_a",
+      "command": "SOUR:VOLT:ILIMIT?",
+      "group": "limit",
+      "ok": true,
+      "response": "1.000000E-03",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_limit_tripped",
+      "command": "SOUR:VOLT:ILIMIT:TRIPPED?",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "overvoltage_protection",
+      "command": "SOUR:VOLT:PROTECTION?",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "overvoltage_protection_tripped",
+      "command": "SOUR:VOLT:PROTECTION:TRIPPED?",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_off_mode",
+      "command": "OUTP:CURR:SMODE?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_off_mode",
+      "command": "OUTP:VOLT:SMODE?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_high_capacitance",
+      "command": "SOUR:CURR:HIGH:CAPACITANCE?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_current_readback",
+      "command": "SOUR:CURR:READ:BACK?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "source_voltage_readback",
+      "command": "SOUR:VOLT:READ:BACK?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_count",
+      "command": "SENS:COUNT?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_current_nplc",
+      "command": "SENS:CURR:NPLC?",
+      "group": "sense",
+      "ok": true,
+      "response": "1.000000",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_current_range_a",
+      "command": "SENS:CURR:RANG?",
+      "group": "sense",
+      "ok": true,
+      "response": "1.000000E-03",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_current_autorange",
+      "command": "SENS:CURR:RANG:AUTO?",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_voltage_nplc",
+      "command": "SENS:VOLT:NPLC?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_voltage_range_v",
+      "command": "SENS:VOLT:RANG?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_voltage_autorange",
+      "command": "SENS:VOLT:RANG:AUTO?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_resistance_nplc",
+      "command": "SENS:RES:NPLC?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_resistance_range_ohm",
+      "command": "SENS:RES:RANG?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_resistance_autorange",
+      "command": "SENS:RES:RANG:AUTO?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_remote_sense_current",
+      "command": "SENS:CURR:RSENSE?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_remote_sense_voltage",
+      "command": "SENS:VOLT:RSENSE?",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_current_filter",
+      "command": "SENS:CURR:AVERAGE?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_current_filter_count",
+      "command": "SENS:CURR:AVERAGE:COUNT?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_voltage_filter",
+      "command": "SENS:VOLT:AVERAGE?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "measure_voltage_filter_count",
+      "command": "SENS:VOLT:AVERAGE:COUNT?",
+      "group": "filter",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "trigger_state",
+      "command": "TRIG:STATE?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "trigger_blocks",
+      "command": "TRIG:BLOCK:LIST?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "buffer1_count",
+      "command": "TRACE:ACTUAL? \"defbuffer1\"",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "buffer2_count",
+      "command": "TRACE:ACTUAL? \"defbuffer2\"",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "format_data",
+      "command": "FORM:DATA?",
+      "group": "format",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.006
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "run_id": "a740948c-0cdf-4856-bc2e-0d3b3d28d5ad",
+  "passed": true,
+  "checks": [
+    {
+      "check_id": "manifest.readable",
+      "passed": true,
+      "detail": "run-manifest.json is a JSON object"
+    },
+    {
+      "check_id": "manifest.final_closed",
+      "passed": true,
+      "detail": "final.closed must be true"
+    },
+    {
+      "check_id": "manifest.query_only",
+      "passed": true,
+      "detail": "query-only and exact-allowlist safety fields must remain asserted"
+    },
+    {
+      "check_id": "manifest.allowed_queries",
+      "passed": true,
+      "detail": "allowed_queries must be a non-empty list of unique strings"
+    },
+    {
+      "check_id": "manifest.policy_sha256",
+      "passed": true,
+      "detail": "policy_sha256 must match the canonical exact allowlist"
+    },
+    {
+      "check_id": "manifest.artifacts",
+      "passed": true,
+      "detail": "artifacts is an object"
+    },
+    {
+      "check_id": "configuration_snapshot.readable",
+      "passed": true,
+      "detail": "referenced configuration snapshot must be a JSON object"
+    },
+    {
+      "check_id": "configuration_snapshot.target",
+      "passed": true,
+      "detail": "configuration resource, target_key, and expected identity must match manifest target"
+    },
+    {
+      "check_id": "configuration_snapshot.profile",
+      "passed": true,
+      "detail": "configuration profile_id must match manifest profile_id"
+    },
+    {
+      "check_id": "configuration_snapshot.command_set",
+      "passed": true,
+      "detail": "configuration command_set must match manifest safety policy"
+    },
+    {
+      "check_id": "configuration_snapshot.safety",
+      "passed": true,
+      "detail": "configuration safety assertions must match manifest safety policy"
+    },
+    {
+      "check_id": "configuration_snapshot.capabilities",
+      "passed": true,
+      "detail": "configuration capabilities must match manifest and authorized query policy"
+    },
+    {
+      "check_id": "configuration_snapshot.transcript",
+      "passed": true,
+      "detail": "transcript must be a list of objects"
+    },
+    {
+      "check_id": "configuration_snapshot.allowlist",
+      "passed": true,
+      "detail": "every executed configuration command must be in manifest allowed_queries"
+    },
+    {
+      "check_id": "configuration_snapshot.query_plan",
+      "passed": true,
+      "detail": "query plan counts must match attempted and skipped transcript entries"
+    },
+    {
+      "check_id": "configuration_snapshot.responses",
+      "passed": true,
+      "detail": "values must exactly match acquired transcript responses"
+    },
+    {
+      "check_id": "configuration_snapshot.observed_identity",
+      "passed": true,
+      "detail": "manifest observed_identity must match the parsed identity response"
+    },
+    {
+      "check_id": "configuration_snapshot.readiness",
+      "passed": true,
+      "detail": "configuration diagnostics must match manifest readiness except final evidence status"
+    },
+    {
+      "check_id": "configuration_snapshot.readiness_derived",
+      "passed": true,
+      "detail": "diagnostics_acceptable and can_start_live must agree with blocking checks and authorization"
+    },
+    {
+      "check_id": "configuration_snapshot.live_readiness",
+      "passed": true,
+      "detail": "live_readiness must mirror diagnostics and manifest authorization"
+    },
+    {
+      "check_id": "events.readable",
+      "passed": true,
+      "detail": "10 JSONL records"
+    },
+    {
+      "check_id": "events.sequence",
+      "passed": true,
+      "detail": "event seq/run_id/elapsed must be coherent"
+    },
+    {
+      "check_id": "events.run_closed",
+      "passed": true,
+      "detail": "the last event must be run_closed"
+    },
+    {
+      "check_id": "streams.structure",
+      "passed": true,
+      "detail": "streams must be a list"
+    },
+    {
+      "check_id": "statistics.sample_count",
+      "passed": true,
+      "detail": "statistics.sample_count must equal stream total 0"
+    },
+    {
+      "check_id": "interventions.readable",
+      "passed": true,
+      "detail": "0 JSONL records"
+    },
+    {
+      "check_id": "interventions.paired",
+      "passed": true,
+      "detail": "interventions must be ordered, paired start/end records"
+    },
+    {
+      "check_id": "statistics.intervention_count",
+      "passed": true,
+      "detail": "statistics.intervention_count must equal completed pairs"
+    }
+  ],
+  "errors": []
+}

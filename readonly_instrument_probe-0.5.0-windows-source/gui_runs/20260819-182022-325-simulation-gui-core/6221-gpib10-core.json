@@ -1,0 +1,234 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T09:20:22.370352+00:00",
+  "finished_utc": "2026-08-19T09:20:22.370352+00:00",
+  "profile": "6221",
+  "instrument_model": "Keithley 6221",
+  "command_set": "SCPI",
+  "scope": "core",
+  "transport": "built-in deterministic simulator",
+  "visa_resource": "GPIB0::10::INSTR",
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "os_system": "Windows",
+    "os_release": "11",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python": "3.12.10",
+    "python_implementation": "CPython",
+    "locale": [
+      "Japanese_Japan",
+      "932"
+    ],
+    "timezone": [
+      "東京 (標準時)",
+      "東京 (夏時間)"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.5.0",
+      "pyvisa": "1.16.2",
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,SIM6221001,D04",
+      "group": "identity",
+      "note": ""
+    },
+    "scpi_version": {
+      "value": "1999.0",
+      "group": "system",
+      "note": ""
+    },
+    "power_on_setup": {
+      "value": "RST",
+      "group": "system",
+      "note": ""
+    },
+    "output_enabled": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "output_low_to_earth": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "triax_inner_shield": {
+      "value": "OLOW",
+      "group": "output",
+      "note": ""
+    },
+    "output_response": {
+      "value": "FAST",
+      "group": "output",
+      "note": ""
+    },
+    "interlock_closed": {
+      "value": "1",
+      "group": "output",
+      "note": ""
+    },
+    "current_level_a": {
+      "value": "1.000000E-06",
+      "group": "source",
+      "note": ""
+    },
+    "current_range_auto": {
+      "value": "1",
+      "group": "source",
+      "note": ""
+    },
+    "current_range_a": {
+      "value": "2.000000E-06",
+      "group": "source",
+      "note": ""
+    },
+    "voltage_compliance_v": {
+      "value": "10.0000",
+      "group": "source",
+      "note": ""
+    },
+    "analog_filter": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,SIM6221001,D04",
+      "identity_matches_profile": true,
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "group": "system",
+      "ok": true,
+      "response": "1999.0",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "group": "system",
+      "ok": true,
+      "response": "RST",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "output_enabled",
+      "command": "OUTP?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "output_low_to_earth",
+      "command": "OUTP:LTEARTH?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "triax_inner_shield",
+      "command": "OUTP:ISHIELD?",
+      "group": "output",
+      "ok": true,
+      "response": "OLOW",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "output_response",
+      "command": "OUTP:RESPONSE?",
+      "group": "output",
+      "ok": true,
+      "response": "FAST",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "interlock_closed",
+      "command": "OUTP:INTERLOCK:TRIPPED?",
+      "group": "output",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "current_level_a",
+      "command": "SOUR:CURR?",
+      "group": "source",
+      "ok": true,
+      "response": "1.000000E-06",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "current_range_auto",
+      "command": "SOUR:CURR:RANG:AUTO?",
+      "group": "source",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "current_range_a",
+      "command": "SOUR:CURR:RANG?",
+      "group": "source",
+      "ok": true,
+      "response": "2.000000E-06",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "voltage_compliance_v",
+      "command": "SOUR:CURR:COMP?",
+      "group": "source",
+      "ok": true,
+      "response": "10.0000",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "analog_filter",
+      "command": "SOUR:CURR:FILT?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.0
+    }
+  ],
+  "production_readiness": {
+    "host_gate_passed": null,
+    "blockers": []
+  },
+  "confirmed_lab_assignment": {
+    "key": "6221-gpib10",
+    "expected_model": "6221",
+    "gpib_address": 10,
+    "allowed_profiles": [
+      "6221"
+    ],
+    "evidence": "NI MAX listed MODEL 6221 at GPIB0::10::INSTR on 2026-08-19.",
+    "command_set_note": "",
+    "resource": "GPIB0::10::INSTR",
+    "status": "confirmed_in_ni_max"
+  },
+  "gui_scan_mode": "simulate"
+}

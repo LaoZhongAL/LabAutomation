@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readonly-instrument-probe"
+version = "0.6.0"
+description = "Query-only inventory probe for Keithley 2182A, 6221, and 2450 instruments"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+visa = [
+    "pyvisa>=1.14,<1.15; python_version < '3.10'",
+    "pyvisa>=1.14; python_version >= '3.10'",
+]
+test = ["pytest>=8"]
+
+[project.scripts]
+instrument-probe = "instrument_probe.cli:main"
+instrument-probe-gui = "instrument_probe.gui:main"
+instrument-pair-observer = "instrument_probe.pair_gui:main"
+
+[tool.setuptools]
+packages = ["instrument_probe"]

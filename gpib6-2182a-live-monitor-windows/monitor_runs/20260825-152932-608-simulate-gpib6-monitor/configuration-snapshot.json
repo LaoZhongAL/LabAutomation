@@ -1,0 +1,203 @@
+{
+  "created_at": "2026-08-25T15:29:32.607+09:00",
+  "operation": "query-only configuration snapshot",
+  "mode": "simulate",
+  "resource": "GPIB0::6::INSTR",
+  "expected_model": "2182A",
+  "expected_serial": "1340129",
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "configuration_controls_exposed": false,
+    "live_query": "FETCh?"
+  },
+  "values": {
+    "identity": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+    "scpi_version": "1991.0",
+    "line_frequency_hz": "50",
+    "power_on_setup": "SAV0",
+    "sense_function": "\"VOLT:DC\"",
+    "active_channel": "1",
+    "nplc": "5.00",
+    "ch1_range_v": "0.010000",
+    "ch1_autorange": "0",
+    "ch2_range_v": "10.000000",
+    "ch2_autorange": "1",
+    "ch1_digital_filter": "0",
+    "ch1_analog_filter": "0",
+    "ch2_digital_filter": "1",
+    "ch2_analog_filter": "0",
+    "trigger_count": "+9.9e37",
+    "trigger_delay_s": "0.000",
+    "trigger_source": "IMM",
+    "sample_count": "1",
+    "continuous_initiation": "1",
+    "data_format": "ASC",
+    "format_elements": "READ"
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "ok": true,
+      "response": "1991.0",
+      "elapsed_ms": 0.002
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "SYST:LFREQUENCY?",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "ok": true,
+      "response": "SAV0",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "sense_function",
+      "command": "SENS:FUNC?",
+      "ok": true,
+      "response": "\"VOLT:DC\"",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "active_channel",
+      "command": "SENS:CHAN?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "nplc",
+      "command": "SENS:VOLT:DC:NPLC?",
+      "ok": true,
+      "response": "5.00",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch1_range_v",
+      "command": "SENS:VOLT:DC:CHAN1:RANG?",
+      "ok": true,
+      "response": "0.010000",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch1_autorange",
+      "command": "SENS:VOLT:DC:CHAN1:RANG:AUTO?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch2_range_v",
+      "command": "SENS:VOLT:DC:CHAN2:RANG?",
+      "ok": true,
+      "response": "10.000000",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch2_autorange",
+      "command": "SENS:VOLT:DC:CHAN2:RANG:AUTO?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "ch1_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN1:DFILTER?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch1_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN1:LPASS?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "ch2_digital_filter",
+      "command": "SENS:VOLT:DC:CHAN2:DFILTER?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "ch2_analog_filter",
+      "command": "SENS:VOLT:DC:CHAN2:LPASS?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "trigger_count",
+      "command": "TRIG:COUNT?",
+      "ok": true,
+      "response": "+9.9e37",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "trigger_delay_s",
+      "command": "TRIG:DELAY?",
+      "ok": true,
+      "response": "0.000",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "trigger_source",
+      "command": "TRIG:SOURCE?",
+      "ok": true,
+      "response": "IMM",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "sample_count",
+      "command": "SAMP:COUN?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.0
+    },
+    {
+      "name": "continuous_initiation",
+      "command": "INIT:CONT?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "data_format",
+      "command": "FORM:DATA?",
+      "ok": true,
+      "response": "ASC",
+      "elapsed_ms": 0.001
+    },
+    {
+      "name": "format_elements",
+      "command": "FORM:ELEM?",
+      "ok": true,
+      "response": "READ",
+      "elapsed_ms": 0.001
+    }
+  ],
+  "live_readiness": {
+    "identity_matches": true,
+    "dc_voltage_function": true,
+    "ascii_data": true,
+    "read_only_element": true,
+    "ready": true
+  },
+  "derived_poll_interval_s": 0.25
+}

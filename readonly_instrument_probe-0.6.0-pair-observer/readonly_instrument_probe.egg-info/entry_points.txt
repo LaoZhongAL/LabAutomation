@@ -1,0 +1,4 @@
+[console_scripts]
+instrument-pair-observer = instrument_probe.pair_gui:main
+instrument-probe = instrument_probe.cli:main
+instrument-probe-gui = instrument_probe.gui:main

@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-08-26T16:42:55.437+09:00",
+  "operation": "explicit query-only GPIB0 inventory refresh",
+  "mode": "real",
+  "safety": {
+    "evidence_committed_before_first_query": true,
+    "list_resources_calls": 1,
+    "resource_filter": "GPIB0 primary addresses 1-30, INSTR only",
+    "identity_query": "*IDN?",
+    "identity_queries_per_resource_max": 1,
+    "timeout_ms": 2000,
+    "sequential": true,
+    "retry": false,
+    "address_construction_or_probe": false,
+    "instrument_writes": false
+  }
+}

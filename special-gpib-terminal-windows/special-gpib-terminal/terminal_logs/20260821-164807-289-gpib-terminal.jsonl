@@ -1,0 +1,9 @@
+{"allowed_resources": ["GPIB0::6::INSTR", "GPIB0::7::INSTR", "GPIB0::9::INSTR", "GPIB0::10::INSTR", "GPIB0::25::INSTR", "GPIB0::26::INSTR"], "event": "session_start", "platform": "win32", "process_id": 11548, "python": "3.12.10", "timeout_ms": 3000, "utc": "2026-08-21T07:48:07.291+00:00"}
+{"active_query": false, "elapsed_ms": 248.448, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0.00000E+00", "timeout_ms": 3000, "utc": "2026-08-21T07:48:13.802+00:00"}
+{"active_query": false, "elapsed_ms": 25.644, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:48:15.582+00:00"}
+{"event": "write_gate", "state": "unlocked", "utc": "2026-08-21T07:48:27.988+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:48:40.806+00:00"}
+{"elapsed_ms": 17.504, "event": "write", "high_risk": true, "message": "SOUR:CURR 1E-9", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:48:40.824+00:00", "visa_write_count": 16}
+{"active_query": false, "elapsed_ms": 20.788, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0.00000E+00", "timeout_ms": 3000, "utc": "2026-08-21T07:48:50.365+00:00"}
+{"active_query": false, "elapsed_ms": 24.597, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:48:51.011+00:00"}
+{"event": "session_end", "reason": "interrupt_or_eof", "utc": "2026-08-21T07:49:58.649+00:00"}

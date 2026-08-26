@@ -1,0 +1,47 @@
+{"allowed_resources": ["GPIB0::6::INSTR", "GPIB0::7::INSTR", "GPIB0::9::INSTR", "GPIB0::10::INSTR", "GPIB0::25::INSTR", "GPIB0::26::INSTR"], "event": "session_start", "platform": "win32", "process_id": 6572, "python": "3.12.10", "timeout_ms": 3000, "utc": "2026-08-21T07:50:03.044+00:00"}
+{"active_query": false, "elapsed_ms": 212.111, "event": "query", "message": "SOUR:CURR:RANG:AUTO?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:50:18.298+00:00"}
+{"active_query": false, "elapsed_ms": 19.893, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.000000E-01", "timeout_ms": 3000, "utc": "2026-08-21T07:50:18.319+00:00"}
+{"active_query": false, "elapsed_ms": 25.218, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:50:19.939+00:00"}
+{"event": "blocked_input", "input": "WRITE GPIB0::9::INSTR SOUR:CURR 1E-5", "operation": "WRITE", "reason": "WRITE is locked. Use the explicit UNLOCK-WRITES command only after the wiring, limits, and intended command have been reviewed.", "utc": "2026-08-21T07:50:46.806+00:00"}
+{"event": "write_gate", "state": "unlocked", "utc": "2026-08-21T07:50:58.455+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:51:09.095+00:00"}
+{"elapsed_ms": 43.497, "event": "write", "high_risk": true, "message": "SOUR:CURR 1E-5", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:51:09.140+00:00", "visa_write_count": 16}
+{"active_query": false, "elapsed_ms": 18.673, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.00000E-05", "timeout_ms": 3000, "utc": "2026-08-21T07:51:21.116+00:00"}
+{"active_query": false, "elapsed_ms": 19.9, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:51:21.640+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:51:40.787+00:00"}
+{"elapsed_ms": 18.01, "event": "write", "high_risk": true, "message": "SOUR:CURR 0", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:51:40.806+00:00", "visa_write_count": 13}
+{"active_query": false, "elapsed_ms": 18.833, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0.00000E+00", "timeout_ms": 3000, "utc": "2026-08-21T07:51:46.259+00:00"}
+{"active_query": false, "elapsed_ms": 19.814, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:51:47.040+00:00"}
+{"event": "write_gate", "state": "locked", "utc": "2026-08-21T07:51:53.739+00:00"}
+{"active_query": false, "elapsed_ms": 21.193, "event": "query", "message": "*IDN?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4533811,D04  /700x ", "timeout_ms": 3000, "utc": "2026-08-21T07:54:15.668+00:00"}
+{"active_query": false, "elapsed_ms": 18.381, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:54:15.687+00:00"}
+{"active_query": false, "elapsed_ms": 18.323, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0.00000E+00", "timeout_ms": 3000, "utc": "2026-08-21T07:54:15.706+00:00"}
+{"active_query": false, "elapsed_ms": 18.275, "event": "query", "message": "SOUR:CURR:RANG:AUTO?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:54:15.725+00:00"}
+{"active_query": false, "elapsed_ms": 18.843, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.000000E-01", "timeout_ms": 3000, "utc": "2026-08-21T07:54:16.128+00:00"}
+{"event": "write_gate", "state": "unlocked", "utc": "2026-08-21T07:54:47.260+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:55:08.255+00:00"}
+{"elapsed_ms": 19.942, "event": "write", "high_risk": true, "message": "SOUR:CURR:RANG 2E-9", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:55:08.276+00:00", "visa_write_count": 21}
+{"active_query": false, "elapsed_ms": 21.332, "event": "query", "message": "SOUR:CURR:RANG:AUTO?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:55:20.572+00:00"}
+{"active_query": false, "elapsed_ms": 18.039, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "2.000000E-09", "timeout_ms": 3000, "utc": "2026-08-21T07:55:20.591+00:00"}
+{"active_query": false, "elapsed_ms": 26.912, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:55:20.957+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:55:44.548+00:00"}
+{"elapsed_ms": 16.63, "event": "write", "high_risk": true, "message": "SOUR:CURR 1E-9", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:55:44.565+00:00", "visa_write_count": 16}
+{"active_query": false, "elapsed_ms": 20.249, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.00000E-09", "timeout_ms": 3000, "utc": "2026-08-21T07:55:51.109+00:00"}
+{"active_query": false, "elapsed_ms": 20.313, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "2.000000E-09", "timeout_ms": 3000, "utc": "2026-08-21T07:55:51.131+00:00"}
+{"active_query": false, "elapsed_ms": 19.606, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:55:51.718+00:00"}
+{"active_query": false, "elapsed_ms": 19.607, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.00000E-09", "timeout_ms": 3000, "utc": "2026-08-21T07:57:04.486+00:00"}
+{"active_query": false, "elapsed_ms": 19.619, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "2.000000E-08", "timeout_ms": 3000, "utc": "2026-08-21T07:57:04.507+00:00"}
+{"active_query": false, "elapsed_ms": 18.675, "event": "query", "message": "SOUR:CURR:RANG:AUTO?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:57:04.527+00:00"}
+{"active_query": false, "elapsed_ms": 25.561, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:57:04.935+00:00"}
+{"active_query": false, "elapsed_ms": 19.317, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "2.000000E-09", "timeout_ms": 3000, "utc": "2026-08-21T07:57:45.849+00:00"}
+{"active_query": false, "elapsed_ms": 22.832, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:57:46.608+00:00"}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:57:58.087+00:00"}
+{"elapsed_ms": 17.16, "event": "write", "high_risk": true, "message": "SOUR:CURR 0", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:57:58.105+00:00", "visa_write_count": 13}
+{"accepted": true, "event": "confirmation", "expected": "SEND HIGH_RISK", "received": "SEND HIGH_RISK", "utc": "2026-08-21T07:58:07.455+00:00"}
+{"elapsed_ms": 20.112, "event": "write", "high_risk": true, "message": "SOUR:CURR:RANG 0.1", "ok": true, "resource": "GPIB0::9::INSTR", "timeout_ms": 3000, "utc": "2026-08-21T07:58:07.476+00:00", "visa_write_count": 20}
+{"active_query": false, "elapsed_ms": 18.965, "event": "query", "message": "SOUR:CURR?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0.00000E+00", "timeout_ms": 3000, "utc": "2026-08-21T07:58:16.831+00:00"}
+{"active_query": false, "elapsed_ms": 21.772, "event": "query", "message": "SOUR:CURR:RANG:AUTO?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:58:16.854+00:00"}
+{"active_query": false, "elapsed_ms": 18.892, "event": "query", "message": "SOUR:CURR:RANG?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "1.000000E-01", "timeout_ms": 3000, "utc": "2026-08-21T07:58:16.873+00:00"}
+{"active_query": false, "elapsed_ms": 24.224, "event": "query", "message": "OUTP?", "ok": true, "resource": "GPIB0::9::INSTR", "response": "0", "timeout_ms": 3000, "utc": "2026-08-21T07:58:19.488+00:00"}
+{"event": "write_gate", "state": "locked", "utc": "2026-08-21T07:58:24.441+00:00"}
+{"event": "session_end", "reason": "exit", "utc": "2026-08-21T07:59:42.794+00:00"}

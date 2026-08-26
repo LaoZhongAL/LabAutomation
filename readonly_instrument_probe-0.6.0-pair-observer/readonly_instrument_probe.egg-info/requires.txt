@@ -1,0 +1,11 @@
+
+[test]
+pytest>=8
+
+[visa]
+
+[visa:python_version < "3.10"]
+pyvisa<1.15,>=1.14
+
+[visa:python_version >= "3.10"]
+pyvisa>=1.14

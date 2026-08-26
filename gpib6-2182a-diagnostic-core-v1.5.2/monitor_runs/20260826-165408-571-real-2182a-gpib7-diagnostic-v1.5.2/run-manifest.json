@@ -1,0 +1,1139 @@
+{
+  "schema_version": 4,
+  "run_id": "1d9bc71d-e5fd-44db-9d3a-5ceff60581bb",
+  "app": {
+    "name": "gpib6-2182a-live-monitor",
+    "version": "1.5.2-query-only-b0-readiness"
+  },
+  "created_at_local": "2026-08-26T16:54:08.581+09:00",
+  "mode": "real",
+  "profile_id": "keithley-2182a-read-only-v1.5.2",
+  "target": {
+    "key": "2182a-gpib7",
+    "label": "Keithley 2182A · GPIB7 · S/N 4510267",
+    "resource": "GPIB0::7::INSTR",
+    "vendor": "KEITHLEY INSTRUMENTS INC.",
+    "model": "2182A",
+    "serial": "4510267",
+    "firmware": "C08/B01",
+    "profile_key": "2182a",
+    "live_supported": true,
+    "inventory_snapshot_id": "3a267530-3dfe-4db6-866a-dcb15ef91ee3",
+    "inventory_snapshot_reference": "inventory-snapshot-reference.json",
+    "inventory_snapshot_payload_sha256": "a5c3db6b688fe2b7cfb2347340eb533cc5e7ee04b45098997ac8ed006bb56e02",
+    "inventory_source_file_sha256": "1c90a08e833cdd7b58340bbb5bcd2efc107402e3954140bd724dbfabb9981c37"
+  },
+  "capabilities": {
+    "live_supported": true,
+    "live_authorized": false
+  },
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "configuration_controls_exposed": false,
+    "command_set": "SCPI",
+    "allowed_queries": [
+      "*IDN?",
+      "FORM:DATA?",
+      "FORM:ELEM?",
+      "INIT:CONT?",
+      "SAMP:COUN?",
+      "SENS:CHAN?",
+      "SENS:FUNC?",
+      "SENS:VOLT:DC:CHAN1:DFILTER?",
+      "SENS:VOLT:DC:CHAN1:LPASS?",
+      "SENS:VOLT:DC:CHAN1:RANG:AUTO?",
+      "SENS:VOLT:DC:CHAN1:RANG?",
+      "SENS:VOLT:DC:CHAN2:DFILTER?",
+      "SENS:VOLT:DC:CHAN2:LPASS?",
+      "SENS:VOLT:DC:CHAN2:RANG:AUTO?",
+      "SENS:VOLT:DC:CHAN2:RANG?",
+      "SENS:VOLT:DC:NPLC?",
+      "STAT:MEAS:COND?",
+      "STAT:OPER:COND?",
+      "STAT:QUES:COND?",
+      "SYST:AZERO?",
+      "SYST:FAZERO?",
+      "SYST:LFREQUENCY?",
+      "SYST:LSYNC?",
+      "SYST:POSETUP?",
+      "SYST:VERS?",
+      "TRIG:COUNT?",
+      "TRIG:DELAY?",
+      "TRIG:SOURCE?"
+    ],
+    "policy_sha256": "546dd00ad6d4b90b169dc8e46b0dc9c0817f2600720edc212aca5b57dd0289d6"
+  },
+  "fault_injection": {
+    "enabled": false,
+    "scenario": "nominal",
+    "seed": null
+  },
+  "state": "DISCONNECTED",
+  "observed_identity": {
+    "raw": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01",
+    "vendor": "KEITHLEY INSTRUMENTS INC.",
+    "model": "2182A",
+    "serial": "4510267",
+    "firmware": "C08/B01"
+  },
+  "readiness": {
+    "schema_version": 4,
+    "profile_id": "keithley-2182a-read-only-v1.5.2",
+    "overall": "WARN",
+    "can_start_live": false,
+    "layer_status": {
+      "communication": "PASS",
+      "identity": "PASS",
+      "configuration": "WARN",
+      "acquisition": "WARN",
+      "recorder": "PASS"
+    },
+    "health_axes": {
+      "identity_verified": "PASS",
+      "transport_healthy": "PASS",
+      "snapshot_complete": "PASS",
+      "safe_idle": "N/A",
+      "configuration_interpretable": "PASS",
+      "profile_matched": "WARN",
+      "calibration_condition": "PASS",
+      "calibration_traceability": "UNKNOWN",
+      "performance_validated": "UNKNOWN",
+      "evidence_complete": "PASS",
+      "live_authorized": "BLOCKED"
+    },
+    "blockers": [],
+    "warnings": [
+      "Operation B0 and Measuring B4 were both set at all 15 sampled instants over the 3.160504 s observation window while continuous initiation was enabled. Stable B0 alone does not identify an unfinished ACAL, Autozero, or another specific source.",
+      "Settings are readable, but range/NPLC/filter are not judged against a sample profile."
+    ],
+    "checks": [
+      {
+        "check_id": "recorder.preflight",
+        "layer": "recorder",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": true,
+        "observed": true,
+        "message": "Evidence directory and diagnostic files are writable."
+      },
+      {
+        "check_id": "communication.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01",
+        "message": "Required query 'identity' completed."
+      },
+      {
+        "check_id": "communication.scpi_version",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1991.0",
+        "message": "Required query 'scpi_version' completed."
+      },
+      {
+        "check_id": "communication.line_frequency_hz",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "50",
+        "message": "Required query 'line_frequency_hz' completed."
+      },
+      {
+        "check_id": "communication.power_on_setup",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "PRES",
+        "message": "Required query 'power_on_setup' completed."
+      },
+      {
+        "check_id": "communication.system_autozero",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'system_autozero' completed."
+      },
+      {
+        "check_id": "communication.front_autozero",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'front_autozero' completed."
+      },
+      {
+        "check_id": "communication.line_sync",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'line_sync' completed."
+      },
+      {
+        "check_id": "communication.sense_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "\"VOLT:DC\"",
+        "message": "Required query 'sense_function' completed."
+      },
+      {
+        "check_id": "communication.active_channel",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'active_channel' completed."
+      },
+      {
+        "check_id": "communication.nplc",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "5.00",
+        "message": "Required query 'nplc' completed."
+      },
+      {
+        "check_id": "communication.ch1_range_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0.010000",
+        "message": "Required query 'ch1_range_v' completed."
+      },
+      {
+        "check_id": "communication.ch1_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_autorange' completed."
+      },
+      {
+        "check_id": "communication.ch2_range_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "10.000000",
+        "message": "Required query 'ch2_range_v' completed."
+      },
+      {
+        "check_id": "communication.ch2_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'ch2_autorange' completed."
+      },
+      {
+        "check_id": "communication.ch1_digital_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_digital_filter' completed."
+      },
+      {
+        "check_id": "communication.ch1_analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch1_analog_filter' completed."
+      },
+      {
+        "check_id": "communication.ch2_digital_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'ch2_digital_filter' completed."
+      },
+      {
+        "check_id": "communication.ch2_analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'ch2_analog_filter' completed."
+      },
+      {
+        "check_id": "communication.trigger_count",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "+9.9e37",
+        "message": "Required query 'trigger_count' completed."
+      },
+      {
+        "check_id": "communication.trigger_delay_s",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0.000",
+        "message": "Required query 'trigger_delay_s' completed."
+      },
+      {
+        "check_id": "communication.trigger_source",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "IMM",
+        "message": "Required query 'trigger_source' completed."
+      },
+      {
+        "check_id": "communication.sample_count",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'sample_count' completed."
+      },
+      {
+        "check_id": "communication.continuous_initiation",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'continuous_initiation' completed."
+      },
+      {
+        "check_id": "communication.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_condition' completed."
+      },
+      {
+        "check_id": "communication.measurement_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'measurement_condition' completed."
+      },
+      {
+        "check_id": "communication.questionable_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'questionable_condition' completed."
+      },
+      {
+        "check_id": "communication.data_format",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "ASC",
+        "message": "Required query 'data_format' completed."
+      },
+      {
+        "check_id": "communication.format_elements",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "READ",
+        "message": "Required query 'format_elements' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01",
+        "message": "Required query 'snapshot_end.identity' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.sense_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "\"VOLT:DC\"",
+        "message": "Required query 'snapshot_end.sense_function' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.active_channel",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'snapshot_end.active_channel' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.nplc",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "5.00",
+        "message": "Required query 'snapshot_end.nplc' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.system_autozero",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'snapshot_end.system_autozero' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.front_autozero",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'snapshot_end.front_autozero' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.line_sync",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.line_sync' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'snapshot_end.operation_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.measurement_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.measurement_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.questionable_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.questionable_condition' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.00",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.00' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.01",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.01' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.02",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.02' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.03",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.03' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.04",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.04' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.05",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.05' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.06",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.06' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.07",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.07' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.08",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.08' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.09",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.09' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.10",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.10' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.11",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.11' completed."
+      },
+      {
+        "check_id": "communication.operation_observation.12",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "273",
+        "message": "Required query 'operation_observation.12' completed."
+      },
+      {
+        "check_id": "communication.configuration_latency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "maximum query latency <= 500 ms",
+        "observed": 22.035,
+        "message": "Configuration query latency is within the observation threshold."
+      },
+      {
+        "check_id": "identity.vendor",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "KEITHLEY INSTRUMENTS INC.",
+        "observed": "KEITHLEY INSTRUMENTS INC.",
+        "message": "Exact manufacturer match."
+      },
+      {
+        "check_id": "identity.model",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "2182A",
+        "observed": "2182A",
+        "message": "Exact model match."
+      },
+      {
+        "check_id": "identity.serial",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "4510267",
+        "observed": "4510267",
+        "message": "Exact serial number match."
+      },
+      {
+        "check_id": "identity.firmware",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "C08/B01",
+        "observed": "C08/B01",
+        "message": "Exact firmware match."
+      },
+      {
+        "check_id": "communication.sentinel_consistency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "parsed begin/end values are equal",
+        "observed": {
+          "values": {
+            "identity": {
+              "begin": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01",
+              "end": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01"
+            },
+            "sense_function": {
+              "begin": "\"VOLT:DC\"",
+              "end": "\"VOLT:DC\""
+            },
+            "active_channel": {
+              "begin": "1",
+              "end": "1"
+            },
+            "nplc": {
+              "begin": "5.00",
+              "end": "5.00"
+            },
+            "system_autozero": {
+              "begin": "1",
+              "end": "1"
+            },
+            "front_autozero": {
+              "begin": "1",
+              "end": "1"
+            },
+            "line_sync": {
+              "begin": "0",
+              "end": "0"
+            }
+          },
+          "missing": [],
+          "mismatches": []
+        },
+        "message": "Critical diagnostic fields remained consistent within the same VISA session."
+      },
+      {
+        "check_id": "configuration.scpi_version",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "positive SCPI version",
+        "observed": 1991.0,
+        "message": "scpi_version satisfies the required rule: positive SCPI version."
+      },
+      {
+        "check_id": "configuration.line_frequency_hz",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "50 or 60 Hz",
+        "observed": 50.0,
+        "message": "line_frequency_hz satisfies the required rule: 50 or 60 Hz."
+      },
+      {
+        "check_id": "configuration.power_on_setup",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "RST, PRES/PRESET, or SAV0",
+        "observed": "PRES",
+        "message": "power_on_setup satisfies the required rule: RST, PRES/PRESET, or SAV0."
+      },
+      {
+        "check_id": "configuration.sense_function",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "VOLT:DC or TEMP",
+        "observed": "VOLT:DC",
+        "message": "sense_function satisfies the required rule: VOLT:DC or TEMP."
+      },
+      {
+        "check_id": "configuration.active_channel",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "channel 1 or 2",
+        "observed": 1,
+        "message": "active_channel satisfies the required rule: channel 1 or 2."
+      },
+      {
+        "check_id": "configuration.nplc",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "positive and within the line-frequency limit",
+        "observed": 5.0,
+        "message": "nplc satisfies the required rule: positive and within the line-frequency limit."
+      },
+      {
+        "check_id": "configuration.trigger_count",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer 1..9999 or infinite sentinel",
+        "observed": 9.9e+37,
+        "message": "trigger_count satisfies the required rule: integer 1..9999 or infinite sentinel."
+      },
+      {
+        "check_id": "configuration.trigger_delay_s",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0..999999.999 s",
+        "observed": 0.0,
+        "message": "trigger_delay_s satisfies the required rule: 0..999999.999 s."
+      },
+      {
+        "check_id": "configuration.trigger_source",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "IMM, TIM, MAN, BUS, or EXT",
+        "observed": "IMM",
+        "message": "trigger_source satisfies the required rule: IMM, TIM, MAN, BUS, or EXT."
+      },
+      {
+        "check_id": "configuration.sample_count",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer 1..1024",
+        "observed": 1,
+        "message": "sample_count satisfies the required rule: integer 1..1024."
+      },
+      {
+        "check_id": "configuration.continuous_initiation",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 1,
+        "message": "continuous_initiation satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.data_format",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "ASC, SRE, or DRE",
+        "observed": "ASC",
+        "message": "data_format satisfies the required rule: ASC, SRE, or DRE."
+      },
+      {
+        "check_id": "configuration.format_elements",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "comma-separated CHAN/READ/TST/UNIT elements",
+        "observed": [
+          "READ"
+        ],
+        "message": "format_elements satisfies the required rule: comma-separated CHAN/READ/TST/UNIT elements."
+      },
+      {
+        "check_id": "configuration.ch1_range_v",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0 V",
+        "observed": 0.01,
+        "message": "ch1_range_v satisfies the required rule: > 0 V."
+      },
+      {
+        "check_id": "configuration.ch1_autorange",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "ch1_autorange satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.ch1_digital_filter",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "ch1_digital_filter satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.ch1_analog_filter",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "ch1_analog_filter satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.ch2_range_v",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "> 0 V",
+        "observed": 10.0,
+        "message": "ch2_range_v satisfies the required rule: > 0 V."
+      },
+      {
+        "check_id": "configuration.ch2_autorange",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "0 or 1",
+        "observed": 1,
+        "message": "ch2_autorange satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.ch2_digital_filter",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "0 or 1",
+        "observed": 1,
+        "message": "ch2_digital_filter satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.ch2_analog_filter",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "ch2_analog_filter satisfies the required rule: 0 or 1."
+      },
+      {
+        "check_id": "configuration.system_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 1,
+        "message": "system_autozero satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "configuration.front_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 1,
+        "message": "front_autozero satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "configuration.line_sync",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 0,
+        "message": "line_sync satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "precision.system_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "ON for sustained precision measurements",
+        "observed": 1,
+        "message": "system_autozero satisfies the required rule: ON for sustained precision measurements."
+      },
+      {
+        "check_id": "precision.line_sync_effective",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "LSYNC is effective only at NPLC >= 1",
+        "observed": {
+          "line_sync": 0,
+          "nplc": 5.0
+        },
+        "message": "The LSYNC state is consistent with its documented NPLC limit."
+      },
+      {
+        "check_id": "status.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x0531",
+        "observed": 273,
+        "message": "operation_condition satisfies the required rule: integer condition word using only mask 0x0531."
+      },
+      {
+        "check_id": "status.measurement_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x03BF",
+        "observed": 0,
+        "message": "measurement_condition satisfies the required rule: integer condition word using only mask 0x03BF."
+      },
+      {
+        "check_id": "status.questionable_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x0310",
+        "observed": 0,
+        "message": "questionable_condition satisfies the required rule: integer condition word using only mask 0x0310."
+      },
+      {
+        "check_id": "acquisition.reading_overflow",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "measurement_condition bit 0 clear",
+        "observed": false,
+        "message": "measurement_condition bit 0 is clear."
+      },
+      {
+        "check_id": "calibration.condition.invalid_constant",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "questionable_condition bit 8 clear",
+        "observed": false,
+        "message": "questionable_condition bit 8 is clear."
+      },
+      {
+        "check_id": "calibration.condition.acal_questionable",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "questionable_condition bit 9 clear",
+        "observed": false,
+        "message": "questionable_condition bit 9 is clear."
+      },
+      {
+        "check_id": "status.temperature_reference",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "questionable_condition bit 4 clear",
+        "observed": false,
+        "message": "questionable_condition bit 4 is clear."
+      },
+      {
+        "check_id": "configuration.snapshot_end.system_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 1,
+        "message": "system_autozero satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "configuration.snapshot_end.front_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 1,
+        "message": "front_autozero satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "configuration.snapshot_end.line_sync",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "OFF/0 or ON/1",
+        "observed": 0,
+        "message": "line_sync satisfies the required rule: OFF/0 or ON/1."
+      },
+      {
+        "check_id": "precision.snapshot_end.system_autozero",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "ON for sustained precision measurements",
+        "observed": 1,
+        "message": "system_autozero satisfies the required rule: ON for sustained precision measurements."
+      },
+      {
+        "check_id": "precision.snapshot_end.line_sync_effective",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "LSYNC is effective only at NPLC >= 1",
+        "observed": {
+          "line_sync": 0,
+          "nplc": 5.0
+        },
+        "message": "The LSYNC state is consistent with its documented NPLC limit."
+      },
+      {
+        "check_id": "status.snapshot_end.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x0531",
+        "observed": 273,
+        "message": "operation_condition satisfies the required rule: integer condition word using only mask 0x0531."
+      },
+      {
+        "check_id": "status.snapshot_end.measurement_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x03BF",
+        "observed": 0,
+        "message": "measurement_condition satisfies the required rule: integer condition word using only mask 0x03BF."
+      },
+      {
+        "check_id": "status.snapshot_end.questionable_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word using only mask 0x0310",
+        "observed": 0,
+        "message": "questionable_condition satisfies the required rule: integer condition word using only mask 0x0310."
+      },
+      {
+        "check_id": "acquisition.snapshot_end.reading_overflow",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "measurement_condition bit 0 clear",
+        "observed": false,
+        "message": "measurement_condition bit 0 is clear."
+      },
+      {
+        "check_id": "calibration.snapshot_end.condition.invalid_constant",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "questionable_condition bit 8 clear",
+        "observed": false,
+        "message": "questionable_condition bit 8 is clear."
+      },
+      {
+        "check_id": "calibration.snapshot_end.condition.acal_questionable",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "questionable_condition bit 9 clear",
+        "observed": false,
+        "message": "questionable_condition bit 9 is clear."
+      },
+      {
+        "check_id": "status.snapshot_end.temperature_reference",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "questionable_condition bit 4 clear",
+        "observed": false,
+        "message": "questionable_condition bit 4 is clear."
+      },
+      {
+        "check_id": "acquisition.operation_observation",
+        "layer": "acquisition",
+        "status": "WARN",
+        "blocks_live": false,
+        "expected": "operation-condition B0 clear, or stable B0 with Measuring B4 at every sampled instant while continuous initiation is enabled",
+        "observed": {
+          "classification": "set_for_entire_window",
+          "valid_sample_count": 15,
+          "b0_set_count": 15,
+          "b0_transition_count": 0,
+          "observed_window_seconds": 3.160504
+        },
+        "message": "Operation B0 and Measuring B4 were both set at all 15 sampled instants over the 3.160504 s observation window while continuous initiation was enabled. Stable B0 alone does not identify an unfinished ACAL, Autozero, or another specific source."
+      },
+      {
+        "check_id": "profile.measurement_baseline",
+        "layer": "configuration",
+        "status": "WARN",
+        "blocks_live": false,
+        "expected": "sample/device-specific approved profile",
+        "observed": "not selected",
+        "message": "Settings are readable, but range/NPLC/filter are not judged against a sample profile."
+      }
+    ],
+    "summary": {
+      "pass": 103,
+      "warn": 2,
+      "blocked": 0,
+      "unknown": 0,
+      "not_applicable": 0,
+      "total": 105
+    },
+    "diagnostics_acceptable": true,
+    "live_supported": true,
+    "live_authorized": false
+  },
+  "artifacts": {
+    "manifest": "run-manifest.json",
+    "events": "events.jsonl",
+    "errors": "errors.jsonl",
+    "interventions": "interventions.jsonl",
+    "configuration_snapshot": "configuration-snapshot.json",
+    "streams": [],
+    "evidence_verification": "evidence-verification.json"
+  },
+  "statistics": {
+    "sample_count": 0,
+    "intervention_count": 0,
+    "error_count": 0
+  },
+  "final": {
+    "closed": true,
+    "finished_at_local": "2026-08-26T16:54:29.388+09:00",
+    "duration_seconds": 20.813,
+    "state": "DISCONNECTED",
+    "termination_reason": "window_closed",
+    "evidence_complete": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "analysis_scope": "host_csv_observation_only_no_thresholds",
+  "source_csv": "voltage-20260826-171659-896.csv",
+  "sample_count": 272,
+  "elapsed": {
+    "first_seconds": 0.047,
+    "last_seconds": 70.453,
+    "span_seconds": 70.406,
+    "interval_seconds": {
+      "count": 271,
+      "p50": 0.264999999999997,
+      "p95": 0.2810000000000059,
+      "max": 0.2970000000000006
+    }
+  },
+  "query_latency_ms": {
+    "count": 272,
+    "p50": 10.7995,
+    "p95": 12.706999999999999,
+    "max": 22.316
+  },
+  "voltage_v": {
+    "median": 3.9828964850000005e-08,
+    "mad": 2.5267618599999993e-08,
+    "standard_deviation": 7.746462034437584e-08,
+    "peak_to_peak": 7.24035637e-07,
+    "linear_drift_v_per_s": 1.7619618176059205e-09
+  },
+  "raw_response": {
+    "consecutive_duplicate_count": 105,
+    "consecutive_duplicate_fraction": 0.3874538745387454,
+    "longest_identical_run": 2
+  }
+}

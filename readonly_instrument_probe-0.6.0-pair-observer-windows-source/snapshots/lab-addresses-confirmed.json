@@ -1,0 +1,13 @@
+{
+  "status": "confirmed_in_ni_max",
+  "confirmed_on": "2026-08-19",
+  "source": "NI MAX production-computer screenshot",
+  "assignments": [
+    {"model": "2182A", "resource": "GPIB0::6::INSTR"},
+    {"model": "2182A", "resource": "GPIB0::7::INSTR"},
+    {"model": "6221", "resource": "GPIB0::9::INSTR"},
+    {"model": "6221", "resource": "GPIB0::10::INSTR"},
+    {"model": "2450", "resource": "GPIB0::25::INSTR", "command_set": "must be confirmed before core"},
+    {"model": "2450", "resource": "GPIB0::26::INSTR", "command_set": "must be confirmed before core"}
+  ]
+}

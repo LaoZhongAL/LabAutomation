@@ -1,0 +1,303 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T09:24:39.532553+00:00",
+  "finished_utc": "2026-08-19T09:24:40.455856+00:00",
+  "profile": "2450-tsp",
+  "instrument_model": "Keithley 2450",
+  "command_set": "TSP",
+  "scope": "core",
+  "transport": "PyVISA",
+  "visa_resource": "GPIB0::26::INSTR",
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "os_system": "Windows",
+    "os_release": "11",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python": "3.12.10",
+    "python_implementation": "CPython",
+    "locale": [
+      "Japanese_Japan",
+      "932"
+    ],
+    "timezone": [
+      "東京 (標準時)",
+      "東京 (夏時間)"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.5.0",
+      "pyvisa": "1.16.2",
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS,MODEL 2450,04464720,1.6.7c",
+      "group": "identity",
+      "note": ""
+    },
+    "model": {
+      "value": "2450",
+      "group": "identity",
+      "note": ""
+    },
+    "serial": {
+      "value": "04464720",
+      "group": "identity",
+      "note": ""
+    },
+    "firmware": {
+      "value": "1.6.7c",
+      "group": "identity",
+      "note": ""
+    },
+    "line_frequency_hz": {
+      "value": "50",
+      "group": "system",
+      "note": ""
+    },
+    "source_output": {
+      "value": "smu.OFF",
+      "group": "output",
+      "note": ""
+    },
+    "source_function": {
+      "value": "smu.FUNC_DC_VOLTAGE",
+      "group": "source",
+      "note": ""
+    },
+    "source_level": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_range": {
+      "value": "0.02",
+      "group": "source",
+      "note": ""
+    },
+    "source_autorange": {
+      "value": "smu.ON",
+      "group": "source",
+      "note": ""
+    },
+    "measure_function": {
+      "value": "smu.FUNC_DC_CURRENT",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_range": {
+      "value": "1e-08",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_autorange": {
+      "value": "smu.ON",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_nplc": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_sense": {
+      "value": "smu.SENSE_2WIRE",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_terminals": {
+      "value": "smu.TERMINALS_FRONT",
+      "group": "routing",
+      "note": ""
+    },
+    "interlock": {
+      "value": "smu.ON",
+      "group": "output",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS,MODEL 2450,04464720,1.6.7c",
+      "identity_matches_profile": true,
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "model",
+      "command": "print(localnode.model)",
+      "group": "identity",
+      "ok": true,
+      "response": "2450",
+      "elapsed_ms": 62.0
+    },
+    {
+      "name": "serial",
+      "command": "print(localnode.serialno)",
+      "group": "identity",
+      "ok": true,
+      "response": "04464720",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "firmware",
+      "command": "print(localnode.version)",
+      "group": "identity",
+      "ok": true,
+      "response": "1.6.7c",
+      "elapsed_ms": 62.0
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "print(localnode.linefreq)",
+      "group": "system",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "source_output",
+      "command": "print(smu.source.output)",
+      "group": "output",
+      "ok": true,
+      "response": "smu.OFF",
+      "elapsed_ms": 63.0
+    },
+    {
+      "name": "source_function",
+      "command": "print(smu.source.func)",
+      "group": "source",
+      "ok": true,
+      "response": "smu.FUNC_DC_VOLTAGE",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "source_level",
+      "command": "print(smu.source.level)",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 62.0
+    },
+    {
+      "name": "source_range",
+      "command": "print(smu.source.range)",
+      "group": "source",
+      "ok": true,
+      "response": "0.02",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "source_autorange",
+      "command": "print(smu.source.autorange)",
+      "group": "source",
+      "ok": true,
+      "response": "smu.ON",
+      "elapsed_ms": 63.0
+    },
+    {
+      "name": "measure_function",
+      "command": "print(smu.measure.func)",
+      "group": "sense",
+      "ok": true,
+      "response": "smu.FUNC_DC_CURRENT",
+      "elapsed_ms": 46.0
+    },
+    {
+      "name": "measure_range",
+      "command": "print(smu.measure.range)",
+      "group": "sense",
+      "ok": true,
+      "response": "1e-08",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "measure_autorange",
+      "command": "print(smu.measure.autorange)",
+      "group": "sense",
+      "ok": true,
+      "response": "smu.ON",
+      "elapsed_ms": 63.0
+    },
+    {
+      "name": "measure_nplc",
+      "command": "print(smu.measure.nplc)",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "measure_sense",
+      "command": "print(smu.measure.sense)",
+      "group": "sense",
+      "ok": true,
+      "response": "smu.SENSE_2WIRE",
+      "elapsed_ms": 62.0
+    },
+    {
+      "name": "measure_terminals",
+      "command": "print(smu.measure.terminals)",
+      "group": "routing",
+      "ok": true,
+      "response": "smu.TERMINALS_FRONT",
+      "elapsed_ms": 47.0
+    },
+    {
+      "name": "interlock",
+      "command": "print(smu.interlock.tripped)",
+      "group": "output",
+      "ok": true,
+      "response": "smu.ON",
+      "elapsed_ms": 63.0
+    }
+  ],
+  "production_readiness": {
+    "policy": "Real VISA/GPIB communication is permitted only on the laboratory Windows x64 control computer. macOS is code-generation, review, and simulation only. Python bitness is recorded but must be validated against the installed VISA library by successfully enumerating VISA resources.",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python_version": "3.12",
+    "checks": {
+      "windows": true,
+      "x86_64_machine": true,
+      "python_3_9_or_newer": true
+    },
+    "host_gate_passed": true,
+    "readiness_scope": "Host and project compatibility only. NI-VISA/Python bitness compatibility must be verified by successful VISA resource enumeration before any query.",
+    "python_bitness_assessment": {
+      "detected_bits": 64,
+      "is_hard_gate": false,
+      "required_condition": "The loaded NI-VISA library must have the same bitness as Python; either 32-bit or 64-bit can be valid."
+    },
+    "blockers": []
+  },
+  "confirmed_lab_assignment": {
+    "key": "2450-gpib26",
+    "expected_model": "2450",
+    "gpib_address": 26,
+    "allowed_profiles": [
+      "2450-scpi",
+      "2450-tsp"
+    ],
+    "evidence": "NI MAX listed MODEL 2450 at GPIB0::26::INSTR on 2026-08-19.",
+    "command_set_note": "Identity-only is safe with either profile. Confirm SCPI or TSP at the front panel before core queries.",
+    "resource": "GPIB0::26::INSTR",
+    "status": "confirmed_in_ni_max"
+  },
+  "gui_scan_mode": "real"
+}

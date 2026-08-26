@@ -1,0 +1,438 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T09:24:42.121608+00:00",
+  "finished_utc": "2026-08-19T09:24:42.121921+00:00",
+  "profile": "2450-tsp",
+  "instrument_model": "Keithley 2450",
+  "command_set": "TSP",
+  "scope": "full",
+  "transport": "built-in deterministic simulator",
+  "visa_resource": null,
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "macOS-26.6.1-arm64-arm-64bit",
+    "os_system": "Darwin",
+    "os_release": "25.6.0",
+    "machine": "arm64",
+    "python_bits": 64,
+    "python": "3.9.6",
+    "python_implementation": "CPython",
+    "locale": [
+      "en_US",
+      "UTF-8"
+    ],
+    "timezone": [
+      "JST",
+      "JST"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.5.1",
+      "pyvisa": null,
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS,MODEL 2450,SIM2450001,1.7.18",
+      "group": "identity",
+      "note": ""
+    },
+    "model": {
+      "value": "2450",
+      "group": "identity",
+      "note": ""
+    },
+    "serial": {
+      "value": "SIM2450001",
+      "group": "identity",
+      "note": ""
+    },
+    "firmware": {
+      "value": "1.7.18",
+      "group": "identity",
+      "note": ""
+    },
+    "line_frequency_hz": {
+      "value": "50",
+      "group": "system",
+      "note": ""
+    },
+    "source_output": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "source_function": {
+      "value": "1",
+      "group": "source",
+      "note": ""
+    },
+    "source_level": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_range": {
+      "value": "2",
+      "group": "source",
+      "note": ""
+    },
+    "source_autorange": {
+      "value": "1",
+      "group": "source",
+      "note": ""
+    },
+    "measure_function": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_range": {
+      "value": "0.001",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_autorange": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_nplc": {
+      "value": "1",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_sense": {
+      "value": "0",
+      "group": "sense",
+      "note": ""
+    },
+    "measure_terminals": {
+      "value": "0",
+      "group": "routing",
+      "note": ""
+    },
+    "interlock": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "source_readback": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "source_off_mode": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "source_high_capacitance": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "overvoltage_protection": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "overvoltage_protection_tripped": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "current_limit": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "voltage_limit": {
+      "value": "0",
+      "group": "limit",
+      "note": ""
+    },
+    "buffer1_count": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "buffer1_capacity": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "buffer1_fill_mode": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "display_light_state": {
+      "value": "0",
+      "group": "display",
+      "note": ""
+    },
+    "lan_ip_configuration": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_mac": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS,MODEL 2450,SIM2450001,1.7.18",
+      "identity_matches_profile": true,
+      "elapsed_ms": 0.015
+    },
+    {
+      "name": "model",
+      "command": "print(localnode.model)",
+      "group": "identity",
+      "ok": true,
+      "response": "2450",
+      "elapsed_ms": 0.007
+    },
+    {
+      "name": "serial",
+      "command": "print(localnode.serialno)",
+      "group": "identity",
+      "ok": true,
+      "response": "SIM2450001",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "firmware",
+      "command": "print(localnode.version)",
+      "group": "identity",
+      "ok": true,
+      "response": "1.7.18",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "line_frequency_hz",
+      "command": "print(localnode.linefreq)",
+      "group": "system",
+      "ok": true,
+      "response": "50",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_output",
+      "command": "print(smu.source.output)",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_function",
+      "command": "print(smu.source.func)",
+      "group": "source",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_level",
+      "command": "print(smu.source.level)",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_range",
+      "command": "print(smu.source.range)",
+      "group": "source",
+      "ok": true,
+      "response": "2",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_autorange",
+      "command": "print(smu.source.autorange)",
+      "group": "source",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_function",
+      "command": "print(smu.measure.func)",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_range",
+      "command": "print(smu.measure.range)",
+      "group": "sense",
+      "ok": true,
+      "response": "0.001",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_autorange",
+      "command": "print(smu.measure.autorange)",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_nplc",
+      "command": "print(smu.measure.nplc)",
+      "group": "sense",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_sense",
+      "command": "print(smu.measure.sense)",
+      "group": "sense",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "measure_terminals",
+      "command": "print(smu.measure.terminals)",
+      "group": "routing",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "interlock",
+      "command": "print(smu.interlock.tripped)",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_readback",
+      "command": "print(smu.source.readback)",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_off_mode",
+      "command": "print(smu.source.offmode)",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "source_high_capacitance",
+      "command": "print(smu.source.highc)",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "overvoltage_protection",
+      "command": "print(smu.source.protect.level)",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "overvoltage_protection_tripped",
+      "command": "print(smu.source.protect.tripped)",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "current_limit",
+      "command": "print(smu.source.ilimit.level)",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "voltage_limit",
+      "command": "print(smu.source.vlimit.level)",
+      "group": "limit",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "buffer1_count",
+      "command": "print(defbuffer1.n)",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "buffer1_capacity",
+      "command": "print(defbuffer1.capacity)",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "buffer1_fill_mode",
+      "command": "print(defbuffer1.fillmode)",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "display_light_state",
+      "command": "print(display.lightstate)",
+      "group": "display",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "lan_ip_configuration",
+      "command": "print(lan.ipconfig())",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.008
+    },
+    {
+      "name": "lan_mac",
+      "command": "print(lan.macaddress)",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    }
+  ]
+}

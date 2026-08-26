@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T16:16:24.594+09:00",
+  "inventory_snapshot_id": "c8e1d09c-e4ba-4a01-936f-38da329cd92e",
+  "source_file": "C:\\LabAutomation\\gpib6-2182a-diagnostic-core-v1.5.1\\monitor_runs\\20260826-161617-819-real-inventory-v1.5.1\\inventory-snapshot.json",
+  "source_file_sha256": "3fa04074463cddad3b3fe6a03ea3f5d2cf1e8b6452d4586a59f5486490309cd5",
+  "snapshot_payload_sha256": "65e4ff32e2707f4439602263fb36252ef8c2115edbbbd79ae77ddddd0c97c0fd",
+  "snapshot": {
+    "schema_version": 1,
+    "snapshot_id": "c8e1d09c-e4ba-4a01-936f-38da329cd92e",
+    "created_at_local": "2026-08-26T16:16:18.450+09:00",
+    "operation": "explicit query-only GPIB0 inventory refresh",
+    "source": "real",
+    "safety": {
+      "explicit_refresh_required": true,
+      "list_resources_calls": 1,
+      "resource_filter": "GPIB0 primary addresses 1-30, INSTR only",
+      "identity_query": "*IDN?",
+      "identity_queries_per_resource_max": 1,
+      "timeout_ms": 2000,
+      "sequential": true,
+      "retry": false,
+      "clear_reset_or_generic_query": false,
+      "live_granted": false
+    },
+    "raw_resources": [
+      "ASRL1::INSTR",
+      "GPIB0::6::INSTR",
+      "GPIB0::7::INSTR",
+      "GPIB0::9::INSTR",
+      "GPIB0::10::INSTR",
+      "GPIB0::25::INSTR"
+    ],
+    "filtered_resources": [
+      "GPIB0::6::INSTR",
+      "GPIB0::7::INSTR",
+      "GPIB0::9::INSTR",
+      "GPIB0::10::INSTR",
+      "GPIB0::25::INSTR"
+    ],
+    "entries": [
+      {
+        "resource": "GPIB0::6::INSTR",
+        "idn_raw": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02  ",
+        "identity": {
+          "raw": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,1340129,C02  /A02",
+          "vendor": "KEITHLEY INSTRUMENTS INC.",
+          "model": "2182A",
+          "serial": "1340129",
+          "firmware": "C02 /A02"
+        },
+        "profile_key": "2182a",
+        "profile_resolution": "exact_model",
+        "status": "recognized",
+        "elapsed_ms": 27.852,
+        "error": null,
+        "live_supported": false
+      },
+      {
+        "resource": "GPIB0::7::INSTR",
+        "idn_raw": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01  ",
+        "identity": {
+          "raw": "KEITHLEY INSTRUMENTS INC.,MODEL 2182A,4510267,C08/B01",
+          "vendor": "KEITHLEY INSTRUMENTS INC.",
+          "model": "2182A",
+          "serial": "4510267",
+          "firmware": "C08/B01"
+        },
+        "profile_key": "2182a",
+        "profile_resolution": "exact_model",
+        "status": "recognized",
+        "elapsed_ms": 30.527,
+        "error": null,
+        "live_supported": false
+      },
+      {
+        "resource": "GPIB0::9::INSTR",
+        "idn_raw": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4533811,D04  /700x ",
+        "identity": {
+          "raw": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4533811,D04  /700x",
+          "vendor": "KEITHLEY INSTRUMENTS INC.",
+          "model": "6221",
+          "serial": "4533811",
+          "firmware": "D04 /700x"
+        },
+        "profile_key": "6221",
+        "profile_resolution": "exact_model",
+        "status": "recognized",
+        "elapsed_ms": 17.115,
+        "error": null,
+        "live_supported": false
+      },
+      {
+        "resource": "GPIB0::10::INSTR",
+        "idn_raw": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x ",
+        "identity": {
+          "raw": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+          "vendor": "KEITHLEY INSTRUMENTS INC.",
+          "model": "6221",
+          "serial": "4581062",
+          "firmware": "D04 /700x"
+        },
+        "profile_key": "6221",
+        "profile_resolution": "exact_model",
+        "status": "recognized",
+        "elapsed_ms": 16.901,
+        "error": null,
+        "live_supported": false
+      },
+      {
+        "resource": "GPIB0::25::INSTR",
+        "idn_raw": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+        "identity": {
+          "raw": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+          "vendor": "KEITHLEY INSTRUMENTS",
+          "model": "2450",
+          "serial": "04584128",
+          "firmware": "1.7.12b"
+        },
+        "profile_key": "2450",
+        "profile_resolution": "known_tsp_asset_exact_identity",
+        "status": "recognized",
+        "elapsed_ms": 13.904,
+        "error": null,
+        "live_supported": false
+      }
+    ],
+    "counts": {
+      "raw_resource_count": 6,
+      "filtered_gpib_count": 5,
+      "identity_response_count": 5,
+      "parsed_identity_count": 5,
+      "recognized_profile_count": 5,
+      "unknown_model_count": 0,
+      "malformed_identity_count": 0,
+      "command_set_ambiguous_count": 0,
+      "io_error_count": 0
+    },
+    "refresh_error": null,
+    "manager_close_error": null
+  }
+}

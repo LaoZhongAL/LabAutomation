@@ -1,0 +1,886 @@
+{
+  "created_at": "2026-08-26T14:43:32.345+09:00",
+  "operation": "query-only single-instrument diagnostic snapshot",
+  "mode": "real",
+  "target_key": "6221-gpib10",
+  "profile_id": "keithley-6221-read-only-v1.5",
+  "command_set": "SCPI",
+  "resource": "GPIB0::10::INSTR",
+  "expected_identity": {
+    "vendor": "KEITHLEY INSTRUMENTS INC.",
+    "model": "6221",
+    "serial": "4581062",
+    "firmware": "D04 /700x"
+  },
+  "capabilities": {
+    "diagnostics_supported": true,
+    "live_supported": false,
+    "live_authorized": false,
+    "live_query": null
+  },
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "configuration_controls_exposed": false,
+    "command_set": "SCPI",
+    "live_query": null
+  },
+  "values": {
+    "identity": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+    "output_enabled": "0",
+    "interlock_tripped_raw": "1",
+    "operation_condition": "0",
+    "measurement_condition": "0",
+    "questionable_condition": "0",
+    "status_byte": "0",
+    "current_range_a": "1.000000E-01",
+    "current_range_auto": "0",
+    "voltage_compliance_v": "1.000000E+01",
+    "analog_filter": "0",
+    "output_response": "FAST",
+    "triax_inner_shield": "OLOW",
+    "output_low_to_earth": "0",
+    "snapshot_end.identity": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+    "snapshot_end.output_enabled": "0",
+    "snapshot_end.operation_condition": "0",
+    "snapshot_end.current_range_a": "1.000000E-01",
+    "snapshot_end.current_range_auto": "0",
+    "snapshot_end.voltage_compliance_v": "1.000000E+01",
+    "snapshot_end.analog_filter": "0"
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+      "elapsed_ms": 2.882
+    },
+    {
+      "name": "output_enabled",
+      "command": "OUTP?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.699
+    },
+    {
+      "name": "interlock_tripped_raw",
+      "command": "OUTP:INTERLOCK:TRIPPED?",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 2.745
+    },
+    {
+      "name": "operation_condition",
+      "command": "STAT:OPER:COND?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.777
+    },
+    {
+      "name": "measurement_condition",
+      "command": "STAT:MEAS:COND?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.977
+    },
+    {
+      "name": "questionable_condition",
+      "command": "STAT:QUES:COND?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.921
+    },
+    {
+      "name": "status_byte",
+      "command": "*STB?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.848
+    },
+    {
+      "name": "current_range_a",
+      "command": "SOUR:CURR:RANG?",
+      "ok": true,
+      "response": "1.000000E-01",
+      "elapsed_ms": 2.992
+    },
+    {
+      "name": "current_range_auto",
+      "command": "SOUR:CURR:RANG:AUTO?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.933
+    },
+    {
+      "name": "voltage_compliance_v",
+      "command": "SOUR:CURR:COMP?",
+      "ok": true,
+      "response": "1.000000E+01",
+      "elapsed_ms": 2.973
+    },
+    {
+      "name": "analog_filter",
+      "command": "SOUR:CURR:FILT?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.905
+    },
+    {
+      "name": "output_response",
+      "command": "OUTP:RESPONSE?",
+      "ok": true,
+      "response": "FAST",
+      "elapsed_ms": 2.912
+    },
+    {
+      "name": "triax_inner_shield",
+      "command": "OUTP:ISHIELD?",
+      "ok": true,
+      "response": "OLOW",
+      "elapsed_ms": 2.92
+    },
+    {
+      "name": "output_low_to_earth",
+      "command": "OUTP:LTEARTH?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.894
+    },
+    {
+      "name": "snapshot_end.identity",
+      "source_name": "identity",
+      "phase": "snapshot_end",
+      "command": "*IDN?",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+      "elapsed_ms": 3.064
+    },
+    {
+      "name": "snapshot_end.output_enabled",
+      "source_name": "output_enabled",
+      "phase": "snapshot_end",
+      "command": "OUTP?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.856
+    },
+    {
+      "name": "snapshot_end.operation_condition",
+      "source_name": "operation_condition",
+      "phase": "snapshot_end",
+      "command": "STAT:OPER:COND?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.952
+    },
+    {
+      "name": "snapshot_end.current_range_a",
+      "source_name": "current_range_a",
+      "phase": "snapshot_end",
+      "command": "SOUR:CURR:RANG?",
+      "ok": true,
+      "response": "1.000000E-01",
+      "elapsed_ms": 2.902
+    },
+    {
+      "name": "snapshot_end.current_range_auto",
+      "source_name": "current_range_auto",
+      "phase": "snapshot_end",
+      "command": "SOUR:CURR:RANG:AUTO?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 3.031
+    },
+    {
+      "name": "snapshot_end.voltage_compliance_v",
+      "source_name": "voltage_compliance_v",
+      "phase": "snapshot_end",
+      "command": "SOUR:CURR:COMP?",
+      "ok": true,
+      "response": "1.000000E+01",
+      "elapsed_ms": 2.992
+    },
+    {
+      "name": "snapshot_end.analog_filter",
+      "source_name": "analog_filter",
+      "phase": "snapshot_end",
+      "command": "SOUR:CURR:FILT?",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 2.951
+    }
+  ],
+  "precision_safety_summary": [
+    {
+      "key": "identity",
+      "label": "Exact identity",
+      "value": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+      "source_names": [
+        "identity"
+      ]
+    },
+    {
+      "key": "accuracy_noise",
+      "label": "Accuracy / noise",
+      "value": "not characterized",
+      "source_names": []
+    },
+    {
+      "key": "output",
+      "label": "Output / interlock",
+      "value": "output OFF; interlock closed/asserted (raw 1)",
+      "source_names": [
+        "output_enabled",
+        "interlock_tripped_raw"
+      ]
+    },
+    {
+      "key": "range",
+      "label": "Current range",
+      "value": "1.000000E-01 A; autorange OFF",
+      "source_names": [
+        "current_range_a",
+        "current_range_auto"
+      ]
+    },
+    {
+      "key": "integration",
+      "label": "NPLC / integration",
+      "value": "N/A",
+      "source_names": []
+    },
+    {
+      "key": "filter",
+      "label": "Analog filter",
+      "value": "OFF",
+      "source_names": [
+        "analog_filter"
+      ]
+    },
+    {
+      "key": "remote_sense",
+      "label": "Remote sense",
+      "value": "N/A",
+      "source_names": []
+    },
+    {
+      "key": "compliance",
+      "label": "Voltage compliance",
+      "value": "limit 1.000000E+01 V; active N/A (output OFF)",
+      "source_names": [
+        "voltage_compliance_v",
+        "measurement_condition",
+        "output_enabled"
+      ]
+    },
+    {
+      "key": "output_path",
+      "label": "Response / guard / low-earth",
+      "value": "response FAST; inner shield OLOW; low-earth OFF",
+      "source_names": [
+        "output_response",
+        "triax_inner_shield",
+        "output_low_to_earth"
+      ]
+    },
+    {
+      "key": "status_conditions",
+      "label": "Condition registers",
+      "value": "OPER 0; MEAS 0; QUES 0; STB 0",
+      "source_names": [
+        "operation_condition",
+        "measurement_condition",
+        "questionable_condition",
+        "status_byte"
+      ]
+    }
+  ],
+  "query_plan": {
+    "candidate_count": 21,
+    "executed_count": 21,
+    "skipped_count": 0,
+    "required_names": [
+      "identity",
+      "output_enabled",
+      "interlock_tripped_raw",
+      "operation_condition",
+      "measurement_condition",
+      "questionable_condition",
+      "status_byte",
+      "current_range_a",
+      "current_range_auto",
+      "voltage_compliance_v",
+      "analog_filter",
+      "output_response",
+      "triax_inner_shield",
+      "output_low_to_earth",
+      "snapshot_end.identity",
+      "snapshot_end.output_enabled",
+      "snapshot_end.operation_condition",
+      "snapshot_end.current_range_a",
+      "snapshot_end.current_range_auto",
+      "snapshot_end.voltage_compliance_v",
+      "snapshot_end.analog_filter"
+    ],
+    "snapshot_end_names": [
+      "identity",
+      "output_enabled",
+      "operation_condition",
+      "current_range_a",
+      "current_range_auto",
+      "voltage_compliance_v",
+      "analog_filter"
+    ],
+    "consistency_names": [
+      "identity",
+      "output_enabled",
+      "current_range_a",
+      "current_range_auto",
+      "voltage_compliance_v",
+      "analog_filter"
+    ]
+  },
+  "diagnostics": {
+    "schema_version": 3,
+    "profile_id": "keithley-6221-read-only-v1.5",
+    "overall": "BLOCKED",
+    "can_start_live": false,
+    "layer_status": {
+      "communication": "PASS",
+      "identity": "PASS",
+      "configuration": "WARN",
+      "acquisition": "BLOCKED",
+      "recorder": "PASS"
+    },
+    "health_axes": {
+      "identity_verified": "PASS",
+      "transport_healthy": "PASS",
+      "snapshot_complete": "PASS",
+      "safe_idle": "BLOCKED",
+      "configuration_interpretable": "PASS",
+      "profile_matched": "WARN",
+      "calibration_condition": "PASS",
+      "calibration_traceability": "UNKNOWN",
+      "performance_validated": "UNKNOWN",
+      "evidence_complete": "UNKNOWN",
+      "live_authorized": "N/A"
+    },
+    "blockers": [
+      "operation_condition differs from the approved baseline.",
+      "snapshot_end.operation_condition differs from the approved baseline."
+    ],
+    "warnings": [
+      "Observed source settings are not compared with a sample safety envelope."
+    ],
+    "checks": [
+      {
+        "check_id": "recorder.preflight",
+        "layer": "recorder",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": true,
+        "observed": true,
+        "message": "Evidence directory and diagnostic files are writable."
+      },
+      {
+        "check_id": "communication.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+        "message": "Required query 'identity' completed."
+      },
+      {
+        "check_id": "communication.output_enabled",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'output_enabled' completed."
+      },
+      {
+        "check_id": "communication.interlock_tripped_raw",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'interlock_tripped_raw' completed."
+      },
+      {
+        "check_id": "communication.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'operation_condition' completed."
+      },
+      {
+        "check_id": "communication.measurement_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'measurement_condition' completed."
+      },
+      {
+        "check_id": "communication.questionable_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'questionable_condition' completed."
+      },
+      {
+        "check_id": "communication.status_byte",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'status_byte' completed."
+      },
+      {
+        "check_id": "communication.current_range_a",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1.000000E-01",
+        "message": "Required query 'current_range_a' completed."
+      },
+      {
+        "check_id": "communication.current_range_auto",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'current_range_auto' completed."
+      },
+      {
+        "check_id": "communication.voltage_compliance_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1.000000E+01",
+        "message": "Required query 'voltage_compliance_v' completed."
+      },
+      {
+        "check_id": "communication.analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'analog_filter' completed."
+      },
+      {
+        "check_id": "communication.output_response",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "FAST",
+        "message": "Required query 'output_response' completed."
+      },
+      {
+        "check_id": "communication.triax_inner_shield",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "OLOW",
+        "message": "Required query 'triax_inner_shield' completed."
+      },
+      {
+        "check_id": "communication.output_low_to_earth",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'output_low_to_earth' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+        "message": "Required query 'snapshot_end.identity' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.output_enabled",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.output_enabled' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.operation_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.current_range_a",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1.000000E-01",
+        "message": "Required query 'snapshot_end.current_range_a' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.current_range_auto",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.current_range_auto' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.voltage_compliance_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1.000000E+01",
+        "message": "Required query 'snapshot_end.voltage_compliance_v' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.analog_filter",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.analog_filter' completed."
+      },
+      {
+        "check_id": "communication.configuration_latency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "maximum query latency <= 500 ms",
+        "observed": 3.064,
+        "message": "Configuration query latency is within the observation threshold."
+      },
+      {
+        "check_id": "identity.vendor",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "KEITHLEY INSTRUMENTS INC.",
+        "observed": "KEITHLEY INSTRUMENTS INC.",
+        "message": "Exact manufacturer match."
+      },
+      {
+        "check_id": "identity.model",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "6221",
+        "observed": "6221",
+        "message": "Exact model match."
+      },
+      {
+        "check_id": "identity.serial",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "4581062",
+        "observed": "4581062",
+        "message": "Exact serial number match."
+      },
+      {
+        "check_id": "identity.firmware",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "D04 /700x",
+        "observed": "D04 /700x",
+        "message": "Exact firmware match."
+      },
+      {
+        "check_id": "communication.sentinel_consistency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "parsed begin/end values are equal",
+        "observed": {
+          "values": {
+            "identity": {
+              "begin": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x",
+              "end": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,4581062,D04  /700x"
+            },
+            "output_enabled": {
+              "begin": "0",
+              "end": "0"
+            },
+            "current_range_a": {
+              "begin": "1.000000E-01",
+              "end": "1.000000E-01"
+            },
+            "current_range_auto": {
+              "begin": "0",
+              "end": "0"
+            },
+            "voltage_compliance_v": {
+              "begin": "1.000000E+01",
+              "end": "1.000000E+01"
+            },
+            "analog_filter": {
+              "begin": "0",
+              "end": "0"
+            }
+          },
+          "missing": [],
+          "mismatches": []
+        },
+        "message": "Critical diagnostic fields remained consistent within the same VISA session."
+      },
+      {
+        "check_id": "safety.output_off",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": 0,
+        "message": "output_enabled matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.current_range_a",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0 A",
+        "observed": 0.1,
+        "message": "current_range_a matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.current_range_auto",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "current_range_auto matches the approved baseline."
+      },
+      {
+        "check_id": "safety.compliance_limit",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0 V",
+        "observed": 10.0,
+        "message": "voltage_compliance_v matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.analog_filter",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "analog_filter matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.output_response",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "FAST or SLOW",
+        "observed": "FAST",
+        "message": "output_response matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.triax_inner_shield",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "GUAR/GUARD or OLOW",
+        "observed": "OLOW",
+        "message": "triax_inner_shield matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.output_low_to_earth",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": 0,
+        "message": "output_low_to_earth matches the approved baseline."
+      },
+      {
+        "check_id": "safety.interlock_ready",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "1 closed/asserted before sourcing",
+        "observed": 1,
+        "message": "6221 interlock is closed/asserted."
+      },
+      {
+        "check_id": "status.status_byte",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..255",
+        "observed": 0,
+        "message": "status_byte matches the approved baseline."
+      },
+      {
+        "check_id": "status.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "operation_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.measurement_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "measurement_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.questionable_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "questionable_condition matches the approved baseline."
+      },
+      {
+        "check_id": "safety.operation_idle",
+        "layer": "acquisition",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "bit 10 set (Idle)",
+        "observed": 0,
+        "message": "operation_condition differs from the approved baseline."
+      },
+      {
+        "check_id": "status.snapshot_end.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "snapshot_end.operation_condition matches the approved baseline."
+      },
+      {
+        "check_id": "safety.snapshot_end.operation_idle",
+        "layer": "acquisition",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "bit 10 set (Idle)",
+        "observed": 0,
+        "message": "snapshot_end.operation_condition differs from the approved baseline."
+      },
+      {
+        "check_id": "safety.over_temperature",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "bit 2 clear",
+        "observed": false,
+        "message": "6221 over-temperature condition is clear."
+      },
+      {
+        "check_id": "safety.compliance_active",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "bit 3 clear",
+        "observed": false,
+        "message": "6221 compliance condition is clear."
+      },
+      {
+        "check_id": "calibration.condition.questionable",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "bit 8 clear",
+        "observed": false,
+        "message": "6221 calibration questionable condition is clear."
+      },
+      {
+        "check_id": "status.error_pending",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "status byte bit 2 clear",
+        "observed": false,
+        "message": "No pending error is reported by status byte bit 2."
+      },
+      {
+        "check_id": "profile.measurement_baseline",
+        "layer": "configuration",
+        "status": "WARN",
+        "blocks_live": false,
+        "expected": "sample/device-specific current and compliance limits",
+        "observed": "not selected",
+        "message": "Observed source settings are not compared with a sample safety envelope."
+      }
+    ],
+    "summary": {
+      "pass": 46,
+      "warn": 1,
+      "blocked": 2,
+      "unknown": 0,
+      "not_applicable": 0,
+      "total": 49
+    },
+    "diagnostics_acceptable": false,
+    "live_supported": false,
+    "live_authorized": false
+  },
+  "live_readiness": {
+    "identity_matches": true,
+    "diagnostics_acceptable": false,
+    "live_supported": false,
+    "live_authorized": false,
+    "ready": false,
+    "overall": "BLOCKED",
+    "blockers": [
+      "operation_condition differs from the approved baseline.",
+      "snapshot_end.operation_condition differs from the approved baseline."
+    ],
+    "warnings": [
+      "Observed source settings are not compared with a sample safety envelope."
+    ]
+  },
+  "derived_poll_interval_s": null,
+  "inventory_snapshot_id": "431af2ce-7150-49c0-8d00-20a18b6c9928",
+  "inventory_snapshot_reference": "inventory-snapshot-reference.json",
+  "inventory_snapshot_payload_sha256": "7c7f8a0672ea62eb39615a5ec729ec240ed08e9441af77145163d8b932e98779",
+  "inventory_source_file_sha256": "ed1fc869b07277abdd1e19b1b9d144fb1470d6d39fdd0af7bbfd7d2888579a09",
+  "fault_injection": {
+    "scenario": "nominal",
+    "consumed_rule_ids": [],
+    "query_history": []
+  }
+}

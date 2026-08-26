@@ -1,0 +1,911 @@
+{
+  "schema_version": 3,
+  "run_id": "042caefb-30da-405d-8557-0bc6d5f4dbba",
+  "app": {
+    "name": "gpib6-2182a-live-monitor",
+    "version": "1.5.0-query-only-snapshot-ownership"
+  },
+  "created_at_local": "2026-08-26T14:43:36.429+09:00",
+  "mode": "real",
+  "profile_id": "keithley-2450-read-only-v1.5",
+  "target": {
+    "key": "2450-gpib25",
+    "label": "Keithley 2450 · GPIB25 · S/N 04584128",
+    "resource": "GPIB0::25::INSTR",
+    "vendor": "KEITHLEY INSTRUMENTS",
+    "model": "2450",
+    "serial": "04584128",
+    "firmware": "1.7.12b",
+    "profile_key": "2450",
+    "live_supported": false,
+    "inventory_snapshot_id": "431af2ce-7150-49c0-8d00-20a18b6c9928",
+    "inventory_snapshot_reference": "inventory-snapshot-reference.json",
+    "inventory_snapshot_payload_sha256": "7c7f8a0672ea62eb39615a5ec729ec240ed08e9441af77145163d8b932e98779",
+    "inventory_source_file_sha256": "ed1fc869b07277abdd1e19b1b9d144fb1470d6d39fdd0af7bbfd7d2888579a09"
+  },
+  "capabilities": {
+    "live_supported": false,
+    "live_authorized": false
+  },
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "configuration_controls_exposed": false,
+    "command_set": "TSP",
+    "allowed_queries": [
+      "*IDN?",
+      "print(localnode.linefreq)",
+      "print(localnode.model)",
+      "print(localnode.serialno)",
+      "print(localnode.version)",
+      "print(smu.interlock.enable)",
+      "print(smu.interlock.tripped)",
+      "print(smu.measure.autorange)",
+      "print(smu.measure.autozero.enable)",
+      "print(smu.measure.filter.count)",
+      "print(smu.measure.filter.enable)",
+      "print(smu.measure.filter.type)",
+      "print(smu.measure.func)",
+      "print(smu.measure.nplc)",
+      "print(smu.measure.range)",
+      "print(smu.measure.sense)",
+      "print(smu.source.autorange)",
+      "print(smu.source.func)",
+      "print(smu.source.ilimit.level)",
+      "print(smu.source.ilimit.tripped)",
+      "print(smu.source.level)",
+      "print(smu.source.offmode)",
+      "print(smu.source.output)",
+      "print(smu.source.protect.level)",
+      "print(smu.source.protect.tripped)",
+      "print(smu.source.range)",
+      "print(smu.source.readback)",
+      "print(smu.source.vlimit.level)",
+      "print(smu.source.vlimit.tripped)",
+      "print(smu.terminals)",
+      "print(status.condition)",
+      "print(status.operation.condition)",
+      "print(status.questionable.condition)"
+    ],
+    "policy_sha256": "7457ff05def3494266de6ef3ef082d2b37ca7cf1bc110045886bcf96d87eb211"
+  },
+  "fault_injection": {
+    "enabled": false,
+    "scenario": "nominal",
+    "seed": null
+  },
+  "state": "DISCONNECTED",
+  "observed_identity": {
+    "raw": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+    "vendor": "KEITHLEY INSTRUMENTS",
+    "model": "2450",
+    "serial": "04584128",
+    "firmware": "1.7.12b"
+  },
+  "readiness": {
+    "schema_version": 3,
+    "profile_id": "keithley-2450-read-only-v1.5",
+    "overall": "BLOCKED",
+    "can_start_live": false,
+    "layer_status": {
+      "communication": "PASS",
+      "identity": "PASS",
+      "configuration": "BLOCKED",
+      "acquisition": "BLOCKED",
+      "recorder": "PASS"
+    },
+    "health_axes": {
+      "identity_verified": "PASS",
+      "transport_healthy": "PASS",
+      "snapshot_complete": "PASS",
+      "safe_idle": "BLOCKED",
+      "configuration_interpretable": "BLOCKED",
+      "profile_matched": "WARN",
+      "calibration_condition": "UNKNOWN",
+      "calibration_traceability": "UNKNOWN",
+      "performance_validated": "UNKNOWN",
+      "evidence_complete": "PASS",
+      "live_authorized": "N/A"
+    },
+    "blockers": [
+      "Response 'source_output' is invalid: ValueError: could not convert string to float: 'smu.OFF'",
+      "source_function differs from the approved baseline.",
+      "Response 'terminals' is invalid: ValueError: could not convert string to float: 'smu.TERMINALS_FRONT'",
+      "Response 'source_off_mode' is invalid: ValueError: could not convert string to float: 'smu.OFFMODE_NORMAL'",
+      "Response 'source_autorange' is invalid: ValueError: could not convert string to float: 'smu.ON'",
+      "Response 'measure_function' is invalid: ValueError: could not convert string to float: 'smu.FUNC_DC_CURRENT'",
+      "Response 'measure_autorange' is invalid: ValueError: could not convert string to float: 'smu.ON'",
+      "Response 'measure_sense' is invalid: ValueError: could not convert string to float: 'smu.SENSE_2WIRE'",
+      "Response 'source_readback' is invalid: ValueError: could not convert string to float: 'smu.ON'",
+      "Response 'measure_filter_enable' is invalid: ValueError: could not convert string to float: 'smu.OFF'",
+      "Response 'measure_filter_type' is invalid: ValueError: could not convert string to float: 'smu.FILTER_REPEAT_AVG'",
+      "Response 'interlock_enabled' is invalid: ValueError: could not convert string to float: 'smu.OFF'",
+      "Response 'interlock_asserted' is invalid: ValueError: could not convert string to float: 'smu.OFF'",
+      "Response 'protection_tripped' is invalid: ValueError: could not convert string to float: 'smu.OFF'",
+      "Response 'protection_level_v' is invalid: ValueError: could not convert string to float: 'smu.PROTECT_NONE'"
+    ],
+    "warnings": [
+      "Response 'measure_autozero' is invalid: ValueError: could not convert string to float: 'smu.ON'",
+      "Observed SMU settings are not compared with a sample safety envelope."
+    ],
+    "checks": [
+      {
+        "check_id": "recorder.preflight",
+        "layer": "recorder",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": true,
+        "observed": true,
+        "message": "Evidence directory and diagnostic files are writable."
+      },
+      {
+        "check_id": "communication.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+        "message": "Required query 'identity' completed."
+      },
+      {
+        "check_id": "communication.model",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "2450",
+        "message": "Required query 'model' completed."
+      },
+      {
+        "check_id": "communication.serial",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "04584128",
+        "message": "Required query 'serial' completed."
+      },
+      {
+        "check_id": "communication.firmware",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1.7.12b",
+        "message": "Required query 'firmware' completed."
+      },
+      {
+        "check_id": "communication.line_frequency_hz",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "50",
+        "message": "Required query 'line_frequency_hz' completed."
+      },
+      {
+        "check_id": "communication.terminals",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.TERMINALS_FRONT",
+        "message": "Required query 'terminals' completed."
+      },
+      {
+        "check_id": "communication.source_output",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'source_output' completed."
+      },
+      {
+        "check_id": "communication.source_off_mode",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFFMODE_NORMAL",
+        "message": "Required query 'source_off_mode' completed."
+      },
+      {
+        "check_id": "communication.source_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.FUNC_DC_VOLTAGE",
+        "message": "Required query 'source_function' completed."
+      },
+      {
+        "check_id": "communication.source_level",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'source_level' completed."
+      },
+      {
+        "check_id": "communication.source_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.ON",
+        "message": "Required query 'source_autorange' completed."
+      },
+      {
+        "check_id": "communication.source_range",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0.02",
+        "message": "Required query 'source_range' completed."
+      },
+      {
+        "check_id": "communication.measure_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.FUNC_DC_CURRENT",
+        "message": "Required query 'measure_function' completed."
+      },
+      {
+        "check_id": "communication.measure_sense",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.SENSE_2WIRE",
+        "message": "Required query 'measure_sense' completed."
+      },
+      {
+        "check_id": "communication.measure_autorange",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.ON",
+        "message": "Required query 'measure_autorange' completed."
+      },
+      {
+        "check_id": "communication.measure_range",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1e-08",
+        "message": "Required query 'measure_range' completed."
+      },
+      {
+        "check_id": "communication.measure_nplc",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'measure_nplc' completed."
+      },
+      {
+        "check_id": "communication.measure_autozero",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.ON",
+        "message": "Required query 'measure_autozero' completed."
+      },
+      {
+        "check_id": "communication.source_readback",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.ON",
+        "message": "Required query 'source_readback' completed."
+      },
+      {
+        "check_id": "communication.measure_filter_enable",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'measure_filter_enable' completed."
+      },
+      {
+        "check_id": "communication.measure_filter_type",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.FILTER_REPEAT_AVG",
+        "message": "Required query 'measure_filter_type' completed."
+      },
+      {
+        "check_id": "communication.measure_filter_count",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "10",
+        "message": "Required query 'measure_filter_count' completed."
+      },
+      {
+        "check_id": "communication.protection_level_v",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.PROTECT_NONE",
+        "message": "Required query 'protection_level_v' completed."
+      },
+      {
+        "check_id": "communication.protection_tripped",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'protection_tripped' completed."
+      },
+      {
+        "check_id": "communication.interlock_enabled",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'interlock_enabled' completed."
+      },
+      {
+        "check_id": "communication.interlock_asserted",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'interlock_asserted' completed."
+      },
+      {
+        "check_id": "communication.status_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'status_condition' completed."
+      },
+      {
+        "check_id": "communication.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'operation_condition' completed."
+      },
+      {
+        "check_id": "communication.questionable_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'questionable_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.identity",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+        "message": "Required query 'snapshot_end.identity' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.source_output",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.OFF",
+        "message": "Required query 'snapshot_end.source_output' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.source_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.FUNC_DC_VOLTAGE",
+        "message": "Required query 'snapshot_end.source_function' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.source_level",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.source_level' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.measure_function",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.FUNC_DC_CURRENT",
+        "message": "Required query 'snapshot_end.measure_function' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.terminals",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "smu.TERMINALS_FRONT",
+        "message": "Required query 'snapshot_end.terminals' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.measure_nplc",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "1",
+        "message": "Required query 'snapshot_end.measure_nplc' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.status_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.status_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.operation_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.operation_condition' completed."
+      },
+      {
+        "check_id": "communication.snapshot_end.questionable_condition",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "successful non-empty response",
+        "observed": "0",
+        "message": "Required query 'snapshot_end.questionable_condition' completed."
+      },
+      {
+        "check_id": "communication.configuration_latency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": false,
+        "expected": "maximum query latency <= 500 ms",
+        "observed": 5.499,
+        "message": "Configuration query latency is within the observation threshold."
+      },
+      {
+        "check_id": "identity.vendor",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "KEITHLEY INSTRUMENTS",
+        "observed": "KEITHLEY INSTRUMENTS",
+        "message": "Exact manufacturer match."
+      },
+      {
+        "check_id": "identity.model",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "2450",
+        "observed": "2450",
+        "message": "Exact model match."
+      },
+      {
+        "check_id": "identity.serial",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "04584128",
+        "observed": "04584128",
+        "message": "Exact serial number match."
+      },
+      {
+        "check_id": "identity.firmware",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "1.7.12b",
+        "observed": "1.7.12b",
+        "message": "Exact firmware match."
+      },
+      {
+        "check_id": "communication.sentinel_consistency",
+        "layer": "communication",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "parsed begin/end values are equal",
+        "observed": {
+          "values": {
+            "identity": {
+              "begin": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b",
+              "end": "KEITHLEY INSTRUMENTS,MODEL 2450,04584128,1.7.12b"
+            },
+            "source_output": {
+              "begin": "smu.OFF",
+              "end": "smu.OFF"
+            },
+            "source_function": {
+              "begin": "smu.FUNC_DC_VOLTAGE",
+              "end": "smu.FUNC_DC_VOLTAGE"
+            },
+            "source_level": {
+              "begin": "0",
+              "end": "0"
+            },
+            "measure_function": {
+              "begin": "smu.FUNC_DC_CURRENT",
+              "end": "smu.FUNC_DC_CURRENT"
+            },
+            "terminals": {
+              "begin": "smu.TERMINALS_FRONT",
+              "end": "smu.TERMINALS_FRONT"
+            },
+            "measure_nplc": {
+              "begin": "1",
+              "end": "1"
+            }
+          },
+          "missing": [],
+          "mismatches": []
+        },
+        "message": "Critical diagnostic fields remained consistent within the same VISA session."
+      },
+      {
+        "check_id": "identity.local_model",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "2450",
+        "observed": "2450",
+        "message": "model matches the approved baseline."
+      },
+      {
+        "check_id": "identity.local_serial",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "04584128",
+        "observed": "04584128",
+        "message": "serial matches the approved baseline."
+      },
+      {
+        "check_id": "identity.local_firmware",
+        "layer": "identity",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "1.7.12b",
+        "observed": "1.7.12B",
+        "message": "firmware matches the approved baseline."
+      },
+      {
+        "check_id": "safety.output_off",
+        "layer": "acquisition",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": "smu.OFF",
+        "message": "Response 'source_output' is invalid: ValueError: could not convert string to float: 'smu.OFF'"
+      },
+      {
+        "check_id": "configuration.source_function",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "current or voltage source function",
+        "observed": null,
+        "message": "source_function differs from the approved baseline."
+      },
+      {
+        "check_id": "configuration.line_frequency_hz",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "50 or 60 Hz",
+        "observed": 50.0,
+        "message": "line_frequency_hz matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.terminals",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "front or rear terminal constant",
+        "observed": "smu.TERMINALS_FRONT",
+        "message": "Response 'terminals' is invalid: ValueError: could not convert string to float: 'smu.TERMINALS_FRONT'"
+      },
+      {
+        "check_id": "configuration.source_off_mode",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "known source-off mode constant",
+        "observed": "smu.OFFMODE_NORMAL",
+        "message": "Response 'source_off_mode' is invalid: ValueError: could not convert string to float: 'smu.OFFMODE_NORMAL'"
+      },
+      {
+        "check_id": "configuration.source_level",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "finite source level",
+        "observed": 0.0,
+        "message": "source_level matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.source_autorange",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": "smu.ON",
+        "message": "Response 'source_autorange' is invalid: ValueError: could not convert string to float: 'smu.ON'"
+      },
+      {
+        "check_id": "configuration.source_range",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0",
+        "observed": 0.02,
+        "message": "source_range matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.measure_function",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "known measure-function constant",
+        "observed": "smu.FUNC_DC_CURRENT",
+        "message": "Response 'measure_function' is invalid: ValueError: could not convert string to float: 'smu.FUNC_DC_CURRENT'"
+      },
+      {
+        "check_id": "configuration.measure_autorange",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": "smu.ON",
+        "message": "Response 'measure_autorange' is invalid: ValueError: could not convert string to float: 'smu.ON'"
+      },
+      {
+        "check_id": "configuration.measure_nplc",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0 PLC",
+        "observed": 1.0,
+        "message": "measure_nplc matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.measure_range",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "> 0",
+        "observed": 1e-08,
+        "message": "measure_range matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.measure_sense",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "2-wire or 4-wire constant",
+        "observed": "smu.SENSE_2WIRE",
+        "message": "Response 'measure_sense' is invalid: ValueError: could not convert string to float: 'smu.SENSE_2WIRE'"
+      },
+      {
+        "check_id": "configuration.source_readback",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": "smu.ON",
+        "message": "Response 'source_readback' is invalid: ValueError: could not convert string to float: 'smu.ON'"
+      },
+      {
+        "check_id": "configuration.measure_filter_enable",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": "smu.OFF",
+        "message": "Response 'measure_filter_enable' is invalid: ValueError: could not convert string to float: 'smu.OFF'"
+      },
+      {
+        "check_id": "configuration.measure_filter_type",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "non-negative filter type constant",
+        "observed": "smu.FILTER_REPEAT_AVG",
+        "message": "Response 'measure_filter_type' is invalid: ValueError: could not convert string to float: 'smu.FILTER_REPEAT_AVG'"
+      },
+      {
+        "check_id": "configuration.measure_filter_count",
+        "layer": "configuration",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer 1..100",
+        "observed": 10,
+        "message": "measure_filter_count matches the approved baseline."
+      },
+      {
+        "check_id": "configuration.interlock_enabled",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1",
+        "observed": "smu.OFF",
+        "message": "Response 'interlock_enabled' is invalid: ValueError: could not convert string to float: 'smu.OFF'"
+      },
+      {
+        "check_id": "safety.interlock_assertion_state",
+        "layer": "acquisition",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "0 or 1 (interlock asserted OFF or ON)",
+        "observed": "smu.OFF",
+        "message": "Response 'interlock_asserted' is invalid: ValueError: could not convert string to float: 'smu.OFF'"
+      },
+      {
+        "check_id": "precision.autozero",
+        "layer": "configuration",
+        "status": "WARN",
+        "blocks_live": false,
+        "expected": 1,
+        "observed": "smu.ON",
+        "message": "Response 'measure_autozero' is invalid: ValueError: could not convert string to float: 'smu.ON'"
+      },
+      {
+        "check_id": "status.status_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..255",
+        "observed": 0,
+        "message": "status_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "operation_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.questionable_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "questionable_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.snapshot_end.status_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..255",
+        "observed": 0,
+        "message": "snapshot_end.status_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.snapshot_end.operation_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "snapshot_end.operation_condition matches the approved baseline."
+      },
+      {
+        "check_id": "status.snapshot_end.questionable_condition",
+        "layer": "acquisition",
+        "status": "PASS",
+        "blocks_live": true,
+        "expected": "integer condition word 0..65535",
+        "observed": 0,
+        "message": "snapshot_end.questionable_condition matches the approved baseline."
+      },
+      {
+        "check_id": "safety.protection_not_tripped",
+        "layer": "acquisition",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": 0,
+        "observed": "smu.OFF",
+        "message": "Response 'protection_tripped' is invalid: ValueError: could not convert string to float: 'smu.OFF'"
+      },
+      {
+        "check_id": "configuration.protection_level",
+        "layer": "configuration",
+        "status": "BLOCKED",
+        "blocks_live": true,
+        "expected": "> 0 V",
+        "observed": "smu.PROTECT_NONE",
+        "message": "Response 'protection_level_v' is invalid: ValueError: could not convert string to float: 'smu.PROTECT_NONE'"
+      },
+      {
+        "check_id": "calibration.traceability.asset_record",
+        "layer": "configuration",
+        "status": "UNKNOWN",
+        "blocks_live": false,
+        "expected": "current external calibration asset record",
+        "observed": "not integrated",
+        "message": "2450 calibration validity is not available from the approved TSP snapshot."
+      },
+      {
+        "check_id": "profile.measurement_baseline",
+        "layer": "configuration",
+        "status": "WARN",
+        "blocks_live": false,
+        "expected": "sample/device-specific source and measure profile",
+        "observed": "not selected",
+        "message": "Observed SMU settings are not compared with a sample safety envelope."
+      }
+    ],
+    "summary": {
+      "pass": 61,
+      "warn": 2,
+      "blocked": 15,
+      "unknown": 1,
+      "not_applicable": 0,
+      "total": 79
+    },
+    "diagnostics_acceptable": false,
+    "live_supported": false,
+    "live_authorized": false
+  },
+  "artifacts": {
+    "manifest": "run-manifest.json",
+    "events": "events.jsonl",
+    "interventions": "interventions.jsonl",
+    "configuration_snapshot": "configuration-snapshot.json",
+    "streams": [],
+    "evidence_verification": "evidence-verification.json"
+  },
+  "statistics": {
+    "sample_count": 0,
+    "intervention_count": 0,
+    "error_count": 0
+  },
+  "final": {
+    "closed": true,
+    "finished_at_local": "2026-08-26T14:43:46.276+09:00",
+    "duration_seconds": 9.844,
+    "state": "DISCONNECTED",
+    "termination_reason": "target_changed",
+    "evidence_complete": true
+  }
+}

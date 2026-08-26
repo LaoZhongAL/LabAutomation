@@ -1,0 +1,2 @@
+[console_scripts]
+instrument-probe = instrument_probe.cli:main

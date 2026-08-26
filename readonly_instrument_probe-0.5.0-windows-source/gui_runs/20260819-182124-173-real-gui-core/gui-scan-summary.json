@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "operation": "one-click query-only GUI core scan of confirmed laboratory map",
+  "mode": "real",
+  "project_version": "0.5.0",
+  "started_utc": "2026-08-19T09:21:24.173774+00:00",
+  "finished_utc": "2026-08-19T09:21:29.905358+00:00",
+  "run_directory": "C:\\LabAutomation\\readonly_instrument_probe-0.5.0-windows-source\\gui_runs\\20260819-182124-173-real-gui-core",
+  "host_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "os_system": "Windows",
+    "os_release": "11",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python": "3.12.10",
+    "python_implementation": "CPython",
+    "locale": [
+      "Japanese_Japan",
+      "932"
+    ],
+    "timezone": [
+      "東京 (標準時)",
+      "東京 (夏時間)"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.5.0",
+      "pyvisa": "1.16.2",
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "production_readiness": {
+    "policy": "Real VISA/GPIB communication is permitted only on the laboratory Windows x64 control computer. macOS is code-generation, review, and simulation only. Python bitness is recorded but must be validated against the installed VISA library by successfully enumerating VISA resources.",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python_version": "3.12",
+    "checks": {
+      "windows": true,
+      "x86_64_machine": true,
+      "python_3_9_or_newer": true
+    },
+    "host_gate_passed": true,
+    "readiness_scope": "Host and project compatibility only. NI-VISA/Python bitness compatibility must be verified by successful VISA resource enumeration before any query.",
+    "python_bitness_assessment": {
+      "detected_bits": 64,
+      "is_hard_gate": false,
+      "required_condition": "The loaded NI-VISA library must have the same bitness as Python; either 32-bit or 64-bit can be valid."
+    },
+    "blockers": []
+  },
+  "safety": {
+    "query_only": true,
+    "scope": "core",
+    "fixed_confirmed_address_map": true,
+    "2450_command_set": "TSP",
+    "generic_write_controls_exposed": false,
+    "reset_clear_trigger_and_acquisition_controls_exposed": false
+  },
+  "all_six_completed_without_io_or_identity_error": true,
+  "warning_count": 1,
+  "instruments": [
+    {
+      "assignment": {
+        "key": "2182a-gpib6",
+        "expected_model": "2182A",
+        "gpib_address": 6,
+        "allowed_profiles": [
+          "2182a"
+        ],
+        "evidence": "NI MAX listed MODEL 2182A at GPIB0::6::INSTR on 2026-08-19.",
+        "command_set_note": "",
+        "resource": "GPIB0::6::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "2182a",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::6::INSTR",
+        "profile": "2182a",
+        "model": "2182A",
+        "serial": "1340129",
+        "firmware": "C02  /A02",
+        "output": "不适用（电压表）",
+        "interlock": "不适用",
+        "line_frequency_hz": "50",
+        "queries_ok": 18,
+        "queries_total": 18,
+        "warnings": [],
+        "status": "passed"
+      },
+      "evidence_file": "2182a-gpib6-core.json"
+    },
+    {
+      "assignment": {
+        "key": "2182a-gpib7",
+        "expected_model": "2182A",
+        "gpib_address": 7,
+        "allowed_profiles": [
+          "2182a"
+        ],
+        "evidence": "NI MAX listed MODEL 2182A at GPIB0::7::INSTR on 2026-08-19.",
+        "command_set_note": "",
+        "resource": "GPIB0::7::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "2182a",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::7::INSTR",
+        "profile": "2182a",
+        "model": "2182A",
+        "serial": "4510267",
+        "firmware": "C08/B01",
+        "output": "不适用（电压表）",
+        "interlock": "不适用",
+        "line_frequency_hz": "50",
+        "queries_ok": 18,
+        "queries_total": 18,
+        "warnings": [],
+        "status": "passed"
+      },
+      "evidence_file": "2182a-gpib7-core.json"
+    },
+    {
+      "assignment": {
+        "key": "6221-gpib9",
+        "expected_model": "6221",
+        "gpib_address": 9,
+        "allowed_profiles": [
+          "6221"
+        ],
+        "evidence": "NI MAX listed MODEL 6221 at GPIB0::9::INSTR on 2026-08-19.",
+        "command_set_note": "",
+        "resource": "GPIB0::9::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "6221",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::9::INSTR",
+        "profile": "6221",
+        "model": "6221",
+        "serial": "4533811",
+        "firmware": "D04  /700x",
+        "output": "OFF",
+        "interlock": "闭合",
+        "line_frequency_hz": "—",
+        "queries_ok": 13,
+        "queries_total": 13,
+        "warnings": [],
+        "status": "passed"
+      },
+      "evidence_file": "6221-gpib9-core.json"
+    },
+    {
+      "assignment": {
+        "key": "6221-gpib10",
+        "expected_model": "6221",
+        "gpib_address": 10,
+        "allowed_profiles": [
+          "6221"
+        ],
+        "evidence": "NI MAX listed MODEL 6221 at GPIB0::10::INSTR on 2026-08-19.",
+        "command_set_note": "",
+        "resource": "GPIB0::10::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "6221",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::10::INSTR",
+        "profile": "6221",
+        "model": "6221",
+        "serial": "4581062",
+        "firmware": "D04  /700x",
+        "output": "OFF",
+        "interlock": "闭合",
+        "line_frequency_hz": "—",
+        "queries_ok": 13,
+        "queries_total": 13,
+        "warnings": [],
+        "status": "passed"
+      },
+      "evidence_file": "6221-gpib10-core.json"
+    },
+    {
+      "assignment": {
+        "key": "2450-gpib25",
+        "expected_model": "2450",
+        "gpib_address": 25,
+        "allowed_profiles": [
+          "2450-scpi",
+          "2450-tsp"
+        ],
+        "evidence": "NI MAX listed MODEL 2450 at GPIB0::25::INSTR on 2026-08-19.",
+        "command_set_note": "Identity-only is safe with either profile. Confirm SCPI or TSP at the front panel before core queries.",
+        "resource": "GPIB0::25::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "2450-tsp",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::25::INSTR",
+        "profile": "2450-tsp",
+        "model": "2450",
+        "serial": "04584128",
+        "firmware": "1.7.12b",
+        "output": "OFF",
+        "interlock": "正常（未跳闸）",
+        "line_frequency_hz": "50",
+        "queries_ok": 17,
+        "queries_total": 17,
+        "warnings": [],
+        "status": "passed"
+      },
+      "evidence_file": "2450-gpib25-core.json"
+    },
+    {
+      "assignment": {
+        "key": "2450-gpib26",
+        "expected_model": "2450",
+        "gpib_address": 26,
+        "allowed_profiles": [
+          "2450-scpi",
+          "2450-tsp"
+        ],
+        "evidence": "NI MAX listed MODEL 2450 at GPIB0::26::INSTR on 2026-08-19.",
+        "command_set_note": "Identity-only is safe with either profile. Confirm SCPI or TSP at the front panel before core queries.",
+        "resource": "GPIB0::26::INSTR",
+        "status": "confirmed_in_ni_max"
+      },
+      "profile": "2450-tsp",
+      "ok": true,
+      "summary": {
+        "resource": "GPIB0::26::INSTR",
+        "profile": "2450-tsp",
+        "model": "2450",
+        "serial": "04464720",
+        "firmware": "1.6.7c",
+        "output": "OFF",
+        "interlock": "已跳闸",
+        "line_frequency_hz": "50",
+        "queries_ok": 17,
+        "queries_total": 17,
+        "warnings": [
+          "2450 互锁已跳闸"
+        ],
+        "status": "warning"
+      },
+      "evidence_file": "2450-gpib26-core.json"
+    }
+  ]
+}

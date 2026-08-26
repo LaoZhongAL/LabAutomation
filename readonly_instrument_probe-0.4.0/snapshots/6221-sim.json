@@ -1,0 +1,802 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-08-19T08:24:52.039795+00:00",
+  "finished_utc": "2026-08-19T08:24:52.040153+00:00",
+  "profile": "6221",
+  "instrument_model": "Keithley 6221",
+  "command_set": "SCPI",
+  "scope": "full",
+  "transport": "built-in deterministic simulator",
+  "visa_resource": null,
+  "safety": {
+    "query_only": true,
+    "exact_allowlist": true,
+    "generic_write_api_exposed": false,
+    "acquisition_trigger_queries_blocked": true,
+    "event_and_error_queue_queries_blocked": true,
+    "stopped_after_first_io_error": false,
+    "stopped_after_identity_mismatch": false
+  },
+  "host_environment": {
+    "os": "macOS-26.6.1-arm64-arm-64bit",
+    "os_system": "Darwin",
+    "os_release": "25.6.0",
+    "machine": "arm64",
+    "python_bits": 64,
+    "python": "3.11.15",
+    "python_implementation": "CPython",
+    "locale": [
+      "en_US",
+      "UTF-8"
+    ],
+    "timezone": [
+      "JST",
+      "JST"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.4.1",
+      "pyvisa": null,
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "instrument": {
+    "identity": {
+      "value": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,SIM6221001,D04",
+      "group": "identity",
+      "note": ""
+    },
+    "scpi_version": {
+      "value": "1999.0",
+      "group": "system",
+      "note": ""
+    },
+    "analog_board_serial": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "analog_board_revision": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "digital_board_serial": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "digital_board_revision": {
+      "value": "0",
+      "group": "system",
+      "note": ""
+    },
+    "power_on_setup": {
+      "value": "RST",
+      "group": "system",
+      "note": ""
+    },
+    "lan_address": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_mask": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_gateway": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "lan_dhcp": {
+      "value": "0",
+      "group": "communication",
+      "note": ""
+    },
+    "output_enabled": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "output_low_to_earth": {
+      "value": "0",
+      "group": "output",
+      "note": ""
+    },
+    "triax_inner_shield": {
+      "value": "OLOW",
+      "group": "output",
+      "note": ""
+    },
+    "output_response": {
+      "value": "FAST",
+      "group": "output",
+      "note": ""
+    },
+    "interlock_closed": {
+      "value": "1",
+      "group": "output",
+      "note": ""
+    },
+    "current_level_a": {
+      "value": "1.000000E-06",
+      "group": "source",
+      "note": ""
+    },
+    "current_range_auto": {
+      "value": "1",
+      "group": "source",
+      "note": ""
+    },
+    "current_range_a": {
+      "value": "2.000000E-06",
+      "group": "source",
+      "note": ""
+    },
+    "voltage_compliance_v": {
+      "value": "10.0000",
+      "group": "source",
+      "note": ""
+    },
+    "analog_filter": {
+      "value": "0",
+      "group": "source",
+      "note": ""
+    },
+    "sweep_start_a": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_stop_a": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_step_a": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_center_a": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_span_a": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "source_delay_s": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_spacing": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_points": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_ranging": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_count": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "sweep_abort_on_compliance": {
+      "value": "0",
+      "group": "sweep",
+      "note": ""
+    },
+    "delta_nv_present": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_high_a": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_low_a": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_delay_s": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_count": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_cold_switch": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "delta_armed": {
+      "value": "0",
+      "group": "delta",
+      "note": ""
+    },
+    "pulse_delta_high_a": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "pulse_delta_low_a": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "pulse_delta_width_s": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "pulse_delta_source_delay_s": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "pulse_delta_count": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "pulse_delta_armed": {
+      "value": "0",
+      "group": "pulse_delta",
+      "note": ""
+    },
+    "wave_function": {
+      "value": "SIN",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_duty_cycle_pct": {
+      "value": "0",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_amplitude_a": {
+      "value": "0",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_frequency_hz": {
+      "value": "1.000000E+03",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_offset_a": {
+      "value": "0",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_duration_s": {
+      "value": "0",
+      "group": "wave",
+      "note": ""
+    },
+    "wave_duration_cycles": {
+      "value": "0",
+      "group": "wave",
+      "note": ""
+    },
+    "format_data": {
+      "value": "0",
+      "group": "format",
+      "note": ""
+    },
+    "format_elements": {
+      "value": "0",
+      "group": "format",
+      "note": ""
+    },
+    "trace_capacity": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "trace_actual": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "trace_type": {
+      "value": "0",
+      "group": "buffer",
+      "note": ""
+    },
+    "trigger_source": {
+      "value": "0",
+      "group": "trigger",
+      "note": ""
+    }
+  },
+  "transcript": [
+    {
+      "name": "identity",
+      "command": "*IDN?",
+      "group": "identity",
+      "ok": true,
+      "response": "KEITHLEY INSTRUMENTS INC.,MODEL 6221,SIM6221001,D04",
+      "identity_matches_profile": true,
+      "elapsed_ms": 0.014
+    },
+    {
+      "name": "scpi_version",
+      "command": "SYST:VERS?",
+      "group": "system",
+      "ok": true,
+      "response": "1999.0",
+      "elapsed_ms": 0.006
+    },
+    {
+      "name": "analog_board_serial",
+      "command": "SYST:ABOARD:SNUMBER?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "analog_board_revision",
+      "command": "SYST:ABOARD:REVISION?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "digital_board_serial",
+      "command": "SYST:DBOARD:SNUMBER?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "digital_board_revision",
+      "command": "SYST:DBOARD:REVISION?",
+      "group": "system",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "power_on_setup",
+      "command": "SYST:POSETUP?",
+      "group": "system",
+      "ok": true,
+      "response": "RST",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "lan_address",
+      "command": "SYST:COMM:ETH:ADDR?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.009
+    },
+    {
+      "name": "lan_mask",
+      "command": "SYST:COMM:ETH:MASK?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.005
+    },
+    {
+      "name": "lan_gateway",
+      "command": "SYST:COMM:ETH:GATEWAY?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "lan_dhcp",
+      "command": "SYST:COMM:ETH:DHCP?",
+      "group": "communication",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "output_enabled",
+      "command": "OUTP?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "output_low_to_earth",
+      "command": "OUTP:LTEARTH?",
+      "group": "output",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "triax_inner_shield",
+      "command": "OUTP:ISHIELD?",
+      "group": "output",
+      "ok": true,
+      "response": "OLOW",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "output_response",
+      "command": "OUTP:RESPONSE?",
+      "group": "output",
+      "ok": true,
+      "response": "FAST",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "interlock_closed",
+      "command": "OUTP:INTERLOCK:TRIPPED?",
+      "group": "output",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "current_level_a",
+      "command": "SOUR:CURR?",
+      "group": "source",
+      "ok": true,
+      "response": "1.000000E-06",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "current_range_auto",
+      "command": "SOUR:CURR:RANG:AUTO?",
+      "group": "source",
+      "ok": true,
+      "response": "1",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "current_range_a",
+      "command": "SOUR:CURR:RANG?",
+      "group": "source",
+      "ok": true,
+      "response": "2.000000E-06",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "voltage_compliance_v",
+      "command": "SOUR:CURR:COMP?",
+      "group": "source",
+      "ok": true,
+      "response": "10.0000",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "analog_filter",
+      "command": "SOUR:CURR:FILT?",
+      "group": "source",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_start_a",
+      "command": "SOUR:CURR:START?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.004
+    },
+    {
+      "name": "sweep_stop_a",
+      "command": "SOUR:CURR:STOP?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_step_a",
+      "command": "SOUR:CURR:STEP?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_center_a",
+      "command": "SOUR:CURR:CENTER?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_span_a",
+      "command": "SOUR:CURR:SPAN?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "source_delay_s",
+      "command": "SOUR:CURR:DELAY?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_spacing",
+      "command": "SOUR:CURR:SWE:SPACING?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_points",
+      "command": "SOUR:CURR:SWE:POINTS?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_ranging",
+      "command": "SOUR:CURR:SWE:RANGING?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_count",
+      "command": "SOUR:CURR:SWE:COUNT?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "sweep_abort_on_compliance",
+      "command": "SOUR:CURR:SWE:CABORT?",
+      "group": "sweep",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_nv_present",
+      "command": "SOUR:DELTA:NVPRESENT?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_high_a",
+      "command": "SOUR:DELTA:HIGH?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_low_a",
+      "command": "SOUR:DELTA:LOW?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_delay_s",
+      "command": "SOUR:DELTA:DELAY?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_count",
+      "command": "SOUR:DELTA:COUNT?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_cold_switch",
+      "command": "SOUR:DELTA:CSWITCH?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "delta_armed",
+      "command": "SOUR:DELTA:ARM?",
+      "group": "delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_high_a",
+      "command": "SOUR:PDELTA:HIGH?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_low_a",
+      "command": "SOUR:PDELTA:LOW?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_width_s",
+      "command": "SOUR:PDELTA:WIDTH?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_source_delay_s",
+      "command": "SOUR:PDELTA:SDELAY?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_count",
+      "command": "SOUR:PDELTA:COUNT?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "pulse_delta_armed",
+      "command": "SOUR:PDELTA:ARM?",
+      "group": "pulse_delta",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_function",
+      "command": "SOUR:WAVE:FUNC?",
+      "group": "wave",
+      "ok": true,
+      "response": "SIN",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_duty_cycle_pct",
+      "command": "SOUR:WAVE:DCYCLE?",
+      "group": "wave",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_amplitude_a",
+      "command": "SOUR:WAVE:AMPL?",
+      "group": "wave",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_frequency_hz",
+      "command": "SOUR:WAVE:FREQ?",
+      "group": "wave",
+      "ok": true,
+      "response": "1.000000E+03",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_offset_a",
+      "command": "SOUR:WAVE:OFFSET?",
+      "group": "wave",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_duration_s",
+      "command": "SOUR:WAVE:DURATION:TIME?",
+      "group": "wave",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "wave_duration_cycles",
+      "command": "SOUR:WAVE:DURATION:CYCLES?",
+      "group": "wave",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "format_data",
+      "command": "FORM:DATA?",
+      "group": "format",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "format_elements",
+      "command": "FORM:ELEM?",
+      "group": "format",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trace_capacity",
+      "command": "TRACE:POINTS?",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trace_actual",
+      "command": "TRACE:ACTUAL?",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trace_type",
+      "command": "TRACE:TYPE?",
+      "group": "buffer",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    },
+    {
+      "name": "trigger_source",
+      "command": "TRIG:SOURCE?",
+      "group": "trigger",
+      "ok": true,
+      "response": "0",
+      "elapsed_ms": 0.003
+    }
+  ]
+}

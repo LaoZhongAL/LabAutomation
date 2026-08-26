@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "operation": "manual-refresh query-only pair configuration snapshot",
+  "project_version": "0.6.0",
+  "mode": "real",
+  "started_utc": "2026-08-21T08:05:39.990700+00:00",
+  "finished_utc": "2026-08-21T08:05:39.993817+00:00",
+  "run_directory": "C:\\LabAutomation\\readonly_instrument_probe-0.6.0-pair-observer\\pair_runs\\20260821-170539-989-real-pair-configuration",
+  "pair": {
+    "6221_resource": "GPIB0::9::INSTR",
+    "2182a_resource": "GPIB0::7::INSTR",
+    "pairing_source": "operator selection in GUI; physical pairing is not inferred"
+  },
+  "local_metadata": {},
+  "safety": {
+    "query_only": true,
+    "manual_refresh_only": true,
+    "automatic_polling": false,
+    "generic_command_entry": false,
+    "instrument_configuration_writes": false,
+    "reset_clear_trigger_acquisition_or_output_control": false,
+    "local_calculation_only": true
+  },
+  "host_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "os_system": "Windows",
+    "os_release": "11",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python": "3.12.10",
+    "python_implementation": "CPython",
+    "locale": [
+      "Japanese_Japan",
+      "932"
+    ],
+    "timezone": [
+      "東京 (標準時)",
+      "東京 (夏時間)"
+    ],
+    "packages": {
+      "readonly-instrument-probe": "0.6.0",
+      "pyvisa": null,
+      "pyvisa-py": null,
+      "pyvisa-sim": null
+    }
+  },
+  "production_readiness": {
+    "policy": "Real VISA/GPIB communication is permitted only on the laboratory Windows x64 control computer. macOS is code-generation, review, and simulation only. Python bitness is recorded but must be validated against the installed VISA library by successfully enumerating VISA resources.",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python_bits": 64,
+    "python_version": "3.12",
+    "checks": {
+      "windows": true,
+      "x86_64_machine": true,
+      "python_3_9_or_newer": true
+    },
+    "host_gate_passed": true,
+    "readiness_scope": "Host and project compatibility only. NI-VISA/Python bitness compatibility must be verified by successful VISA resource enumeration before any query.",
+    "python_bitness_assessment": {
+      "detected_bits": 64,
+      "is_hard_gate": false,
+      "required_condition": "The loaded NI-VISA library must have the same bitness as Python; either 32-bit or 64-bit can be valid."
+    },
+    "blockers": []
+  },
+  "summary": {
+    "status": "warning",
+    "warnings": [
+      "6221 did not complete every selected query.",
+      "2182A did not complete every selected query; if Delta mode owns it over RS-232, its GPIB interface may be unavailable."
+    ],
+    "6221": {
+      "output": "—",
+      "interlock": "—",
+      "programmed_current_a": null,
+      "current_range_a": null,
+      "voltage_compliance_v": null,
+      "delta_nv_present": null,
+      "delta_high_a": null,
+      "delta_low_a": null,
+      "delta_armed": null
+    },
+    "2182a": {
+      "sense_function": null,
+      "active_channel": null,
+      "nplc": null,
+      "latest_cached_voltage_v": null
+    },
+    "calculation": {
+      "resistance_ohm": null,
+      "nominal_resistance_ohm": null,
+      "absolute_error_ohm": null,
+      "relative_error_percent": null,
+      "status": "Not requested for a configuration snapshot."
+    }
+  },
+  "instruments": {
+    "6221": {
+      "schema_version": 2,
+      "profile": "6221",
+      "instrument_model": "Keithley 6221",
+      "command_set": "SCPI",
+      "scope": "pair_observer_allowlist",
+      "transport": "not opened",
+      "visa_resource": "GPIB0::9::INSTR",
+      "safety": {
+        "query_only": true,
+        "exact_allowlist": true,
+        "generic_write_api_exposed": false,
+        "acquisition_trigger_queries_blocked": true,
+        "event_and_error_queue_queries_blocked": true,
+        "stopped_after_first_io_error": true,
+        "stopped_after_identity_mismatch": false
+      },
+      "host_environment": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "os_system": "Windows",
+        "os_release": "11",
+        "machine": "AMD64",
+        "python_bits": 64,
+        "python": "3.12.10",
+        "python_implementation": "CPython",
+        "locale": [
+          "Japanese_Japan",
+          "932"
+        ],
+        "timezone": [
+          "東京 (標準時)",
+          "東京 (夏時間)"
+        ],
+        "packages": {
+          "readonly-instrument-probe": "0.6.0",
+          "pyvisa": null,
+          "pyvisa-py": null,
+          "pyvisa-sim": null
+        }
+      },
+      "instrument": {},
+      "transcript": [
+        {
+          "name": "session_open_or_collection",
+          "ok": false,
+          "error": "RuntimeError: Real mode needs PyVISA. Install with: pip install -e '.[visa]'"
+        }
+      ]
+    },
+    "2182a": {
+      "schema_version": 2,
+      "profile": "2182a",
+      "instrument_model": "Keithley 2182A",
+      "command_set": "SCPI",
+      "scope": "pair_observer_allowlist",
+      "transport": "not opened",
+      "visa_resource": "GPIB0::7::INSTR",
+      "safety": {
+        "query_only": true,
+        "exact_allowlist": true,
+        "generic_write_api_exposed": false,
+        "acquisition_trigger_queries_blocked": true,
+        "event_and_error_queue_queries_blocked": true,
+        "stopped_after_first_io_error": true,
+        "stopped_after_identity_mismatch": false
+      },
+      "host_environment": {
+        "os": "Windows-11-10.0.26200-SP0",
+        "os_system": "Windows",
+        "os_release": "11",
+        "machine": "AMD64",
+        "python_bits": 64,
+        "python": "3.12.10",
+        "python_implementation": "CPython",
+        "locale": [
+          "Japanese_Japan",
+          "932"
+        ],
+        "timezone": [
+          "東京 (標準時)",
+          "東京 (夏時間)"
+        ],
+        "packages": {
+          "readonly-instrument-probe": "0.6.0",
+          "pyvisa": null,
+          "pyvisa-py": null,
+          "pyvisa-sim": null
+        }
+      },
+      "instrument": {},
+      "transcript": [
+        {
+          "name": "session_open_or_collection",
+          "ok": false,
+          "error": "RuntimeError: Real mode needs PyVISA. Install with: pip install -e '.[visa]'"
+        }
+      ]
+    }
+  },
+  "evidence_file": "C:\\LabAutomation\\readonly_instrument_probe-0.6.0-pair-observer\\pair_runs\\20260821-170539-989-real-pair-configuration\\pair-observer.json"
+}

@@ -1,0 +1,1 @@
+{"allowed_resources": ["GPIB0::6::INSTR", "GPIB0::7::INSTR", "GPIB0::9::INSTR", "GPIB0::10::INSTR", "GPIB0::25::INSTR", "GPIB0::26::INSTR"], "event": "session_start", "platform": "win32", "process_id": 43476, "python": "3.12.10", "timeout_ms": 3000, "utc": "2026-08-25T02:20:09.380+00:00"}

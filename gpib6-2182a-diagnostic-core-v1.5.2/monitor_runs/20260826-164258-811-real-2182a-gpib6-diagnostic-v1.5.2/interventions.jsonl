@@ -1,0 +1,2 @@
+{"schema_version":1,"run_id":"477f517c-c09d-4f7f-8a8f-22765aea6d5c","seq":1,"stream_id":"190f0fd3-2c5e-4040-97e7-d908e76ae14d","intervention_id":"1f0aa681-d18a-4923-8fed-b0db8463b675","phase":"start","elapsed_seconds":76.282,"intervention_type":"cable_disturbance","location":"line"}
+{"schema_version":1,"run_id":"477f517c-c09d-4f7f-8a8f-22765aea6d5c","seq":2,"stream_id":"190f0fd3-2c5e-4040-97e7-d908e76ae14d","intervention_id":"1f0aa681-d18a-4923-8fed-b0db8463b675","phase":"end","elapsed_seconds":87.235,"intervention_type":"cable_disturbance","location":"line"}
